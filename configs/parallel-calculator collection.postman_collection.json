@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "1c8ff1e8-0f39-42d8-ab9b-494961f6fd8a",
+		"name": "parallel-calculator collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42795783"
+	},
+	"item": [
+		{
+			"name": "post expressions",
+			"item": [
+				{
+					"name": "simple expression",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();",
+									"",
+									"pm.environment.set(\"lastExpressionId\", jsonData.id);",
+									"",
+									"console.log(\"Сохранённый ID:\", jsonData.id);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"expression\": \"2+2*2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/calculate"
+					},
+					"response": []
+				},
+				{
+					"name": "incorrect data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"expression\": \"incorrect expression\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/calculate"
+					},
+					"response": []
+				},
+				{
+					"name": "division by zero",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();",
+									"",
+									"pm.environment.set(\"lastExpressionId\", jsonData.id);",
+									"",
+									"console.log(\"Сохранённый ID:\", jsonData.id);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"expression\": \"2+2*(1+7)/(2*2)/(2-2)\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/api/v1/calculate"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get expressions",
+			"item": [
+				{
+					"name": "get one expression",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/expressions/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"expressions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "expression not found",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/expressions/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"expressions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "0",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get last expression",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const savedId = pm.environment.get(\"lastExpressionId\");",
+									"",
+									"console.log(\"ID:\", savedId)",
+									"pm.request.url = pm.request.url.toString().replace(\":id\", savedId);",
+									"",
+									"console.log(\"URL after replacement:\", pm.request.url.toString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/expressions/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"expressions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all expressions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/expressions"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

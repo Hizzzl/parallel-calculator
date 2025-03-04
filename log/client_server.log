@@ -1,0 +1,2940 @@
+INFO: 2025/03/03 23:30:33 main.go:35: Orchestrator server started on port 8080
+INFO: 2025/03/03 23:30:45 main.go:35: Orchestrator server started on port 8080
+INFO: 2025/03/03 23:30:56 logger.go:21: Received get task request
+INFO: 2025/03/03 23:30:56 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:30:59 logger.go:21: Received get task request
+INFO: 2025/03/03 23:30:59 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:02 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:02 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:05 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:05 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:08 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:08 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:11 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:11 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:14 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:14 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:17 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:17 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:20 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:20 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:23 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:23 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:26 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:26 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:29 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:29 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:32 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:32 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:35 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:35 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:38 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:38 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:41 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:41 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:44 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:44 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:47 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:47 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:50 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:50 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:53 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:53 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:56 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:56 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:31:59 logger.go:21: Received get task request
+INFO: 2025/03/03 23:31:59 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:02 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:02 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:05 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:05 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:08 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:08 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:11 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:11 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:14 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:14 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:17 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:17 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:20 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:20 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:23 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:23 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:26 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:26 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:29 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:29 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:32 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:32 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:35 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:35 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:38 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:38 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:41 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:41 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:44 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:44 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:47 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:47 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:50 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:50 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:53 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:53 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:56 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:56 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:32:59 logger.go:21: Received get task request
+INFO: 2025/03/03 23:32:59 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:02 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:02 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:05 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:05 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:08 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:08 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:11 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:11 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:14 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:14 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:17 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:17 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:20 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:20 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:23 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:23 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:26 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:26 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:29 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:29 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:32 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:32 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:35 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:35 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:38 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:38 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:41 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:41 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:44 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:44 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:47 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:47 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:50 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:50 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:53 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:53 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:56 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:56 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:33:59 logger.go:21: Received get task request
+INFO: 2025/03/03 23:33:59 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:02 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:02 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:05 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:05 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:08 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:08 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:11 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:11 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:14 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:14 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:17 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:17 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:20 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:20 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:23 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:23 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:26 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:26 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:29 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:29 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:32 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:32 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:35 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:35 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:38 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:38 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:41 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:41 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:44 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:44 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:47 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:47 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:50 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:50 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:53 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:53 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:56 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:56 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:34:59 logger.go:21: Received get task request
+INFO: 2025/03/03 23:34:59 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:02 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:02 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:05 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:05 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:08 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:08 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:11 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:11 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:14 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:14 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:17 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:17 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:20 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:20 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:23 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:23 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:26 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:26 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:29 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:29 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:32 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:32 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:35 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:35 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:38 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:38 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:41 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:41 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:44 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:44 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:47 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:47 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:50 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:50 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:53 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:53 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:56 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:56 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:35:59 logger.go:21: Received get task request
+INFO: 2025/03/03 23:35:59 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:02 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:02 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:05 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:05 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:08 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:08 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:11 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:11 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:14 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:14 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:17 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:17 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:20 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:20 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:23 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:23 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:26 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:26 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:29 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:29 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:32 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:32 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:35 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:35 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:38 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:38 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:36:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:36:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:37:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:37:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:38:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:38:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:45 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/03 23:39:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:48 logger.go:21: Successfully got task from manager. Received task id: 2005747038
+INFO: 2025/03/03 23:39:48 logger.go:21: Successfully got expression by id from manager. Received expression: {2005747038 982839075 982839075 right false 0xc0000cd810 0xc0000cd880 * working 0}
+INFO: 2025/03/03 23:39:48 logger.go:21: Successfully created task response. Task: {{2005747038 2 2 * 300ms}}
+INFO: 2025/03/03 23:39:48 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:39:48 logger.go:21: Successfully decoded task result: {2005747038 4 nil}. Task id: 2005747038
+INFO: 2025/03/03 23:39:48 logger.go:21: Successfully updated expression result. Result: 4. Task id: 2005747038
+INFO: 2025/03/03 23:39:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:51 logger.go:21: Successfully got task from manager. Received task id: 982839075
+INFO: 2025/03/03 23:39:51 logger.go:21: Successfully got expression by id from manager. Received expression: {982839075 0 0 nil true 0xc0000cd730 0xc0000cd7a0 + working 0}
+INFO: 2025/03/03 23:39:51 logger.go:21: Successfully created task response. Task: {{982839075 2 4 + 5s}}
+INFO: 2025/03/03 23:39:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:39:56 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:39:56 logger.go:21: Successfully decoded task result: {982839075 6 nil}. Task id: 982839075
+INFO: 2025/03/03 23:39:56 logger.go:21: Successfully updated expression result. Result: 6. Task id: 982839075
+INFO: 2025/03/03 23:39:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:39:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:43 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/03 23:40:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:45 logger.go:21: Successfully got task from manager. Received task id: 2119694066
+INFO: 2025/03/03 23:40:45 logger.go:21: Successfully got expression by id from manager. Received expression: {2119694066 1521034311 1521034311 right false 0xc0002958f0 0xc000295960 * working 0}
+INFO: 2025/03/03 23:40:45 logger.go:21: Successfully created task response. Task: {{2119694066 2 2 * 300ms}}
+INFO: 2025/03/03 23:40:45 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:40:45 logger.go:21: Successfully decoded task result: {2119694066 4 nil}. Task id: 2119694066
+INFO: 2025/03/03 23:40:45 logger.go:21: Successfully updated expression result. Result: 4. Task id: 2119694066
+INFO: 2025/03/03 23:40:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:48 logger.go:21: Successfully got task from manager. Received task id: 1521034311
+INFO: 2025/03/03 23:40:48 logger.go:21: Successfully got expression by id from manager. Received expression: {1521034311 0 0 nil true 0xc000295810 0xc000295880 + working 0}
+INFO: 2025/03/03 23:40:48 logger.go:21: Successfully created task response. Task: {{1521034311 2 4 + 5s}}
+INFO: 2025/03/03 23:40:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:53 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:40:53 logger.go:21: Successfully decoded task result: {1521034311 6 nil}. Task id: 1521034311
+INFO: 2025/03/03 23:40:53 logger.go:21: Successfully updated expression result. Result: 6. Task id: 1521034311
+INFO: 2025/03/03 23:40:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:40:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:40:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:41:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:41:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:42:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:42:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:43:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:43:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:44:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:44:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:45:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:45:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:46:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:46:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:47:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:47:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:48:56 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/03 23:48:56 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/03 23:48:57 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/03 23:48:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:48:57 logger.go:21: Successfully got task from manager. Received task id: 1783245186
+INFO: 2025/03/03 23:48:57 logger.go:21: Successfully got expression by id from manager. Received expression: {1783245186 2140556909 2140556909 right false 0xc0004108c0 0xc000410930 * working 0}
+INFO: 2025/03/03 23:48:57 logger.go:21: Successfully created task response. Task: {{1783245186 2 2 * 300ms}}
+INFO: 2025/03/03 23:48:58 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:48:58 logger.go:21: Successfully decoded task result: {1783245186 4 nil}. Task id: 1783245186
+INFO: 2025/03/03 23:48:58 logger.go:21: Successfully updated expression result. Result: 4. Task id: 1783245186
+INFO: 2025/03/03 23:48:58 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/03 23:49:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:00 logger.go:21: Successfully got task from manager. Received task id: 2140556909
+INFO: 2025/03/03 23:49:00 logger.go:21: Successfully got expression by id from manager. Received expression: {2140556909 0 0 nil true 0xc0004107e0 0xc000410850 + working 0}
+INFO: 2025/03/03 23:49:00 logger.go:21: Successfully created task response. Task: {{2140556909 2 4 + 5s}}
+INFO: 2025/03/03 23:49:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:03 logger.go:21: Successfully got task from manager. Received task id: 938698597
+INFO: 2025/03/03 23:49:03 logger.go:21: Successfully got expression by id from manager. Received expression: {938698597 412095013 412095013 right false 0xc0003c73b0 0xc0003c7420 * working 0}
+INFO: 2025/03/03 23:49:03 logger.go:21: Successfully created task response. Task: {{938698597 2 2 * 300ms}}
+INFO: 2025/03/03 23:49:04 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:49:04 logger.go:21: Successfully decoded task result: {938698597 4 nil}. Task id: 938698597
+INFO: 2025/03/03 23:49:04 logger.go:21: Successfully updated expression result. Result: 4. Task id: 938698597
+INFO: 2025/03/03 23:49:05 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:49:05 logger.go:21: Successfully decoded task result: {2140556909 6 nil}. Task id: 2140556909
+INFO: 2025/03/03 23:49:05 logger.go:21: Successfully updated expression result. Result: 6. Task id: 2140556909
+INFO: 2025/03/03 23:49:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:06 logger.go:21: Successfully got task from manager. Received task id: 412095013
+INFO: 2025/03/03 23:49:06 logger.go:21: Successfully got expression by id from manager. Received expression: {412095013 0 0 nil true 0xc0003c72d0 0xc0003c7340 + working 0}
+INFO: 2025/03/03 23:49:06 logger.go:21: Successfully created task response. Task: {{412095013 2 4 + 5s}}
+INFO: 2025/03/03 23:49:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:09 logger.go:21: Successfully got task from manager. Received task id: 2649773444
+INFO: 2025/03/03 23:49:09 logger.go:21: Successfully got expression by id from manager. Received expression: {2649773444 416540276 416540276 right false 0xc000353490 0xc000353500 * working 0}
+INFO: 2025/03/03 23:49:09 logger.go:21: Successfully created task response. Task: {{2649773444 2 2 * 300ms}}
+INFO: 2025/03/03 23:49:10 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:49:10 logger.go:21: Successfully decoded task result: {2649773444 4 nil}. Task id: 2649773444
+INFO: 2025/03/03 23:49:10 logger.go:21: Successfully updated expression result. Result: 4. Task id: 2649773444
+INFO: 2025/03/03 23:49:11 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:49:11 logger.go:21: Successfully decoded task result: {412095013 6 nil}. Task id: 412095013
+INFO: 2025/03/03 23:49:11 logger.go:21: Successfully updated expression result. Result: 6. Task id: 412095013
+INFO: 2025/03/03 23:49:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:12 logger.go:21: Successfully got task from manager. Received task id: 416540276
+INFO: 2025/03/03 23:49:12 logger.go:21: Successfully got expression by id from manager. Received expression: {416540276 0 0 nil true 0xc0003533b0 0xc000353420 + working 0}
+INFO: 2025/03/03 23:49:12 logger.go:21: Successfully created task response. Task: {{416540276 2 4 + 5s}}
+INFO: 2025/03/03 23:49:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:15 logger.go:21: Successfully got task from manager. Received task id: 3893806860
+INFO: 2025/03/03 23:49:15 logger.go:21: Successfully got expression by id from manager. Received expression: {3893806860 271097123 271097123 right false 0xc0003c75e0 0xc0003c7650 * working 0}
+INFO: 2025/03/03 23:49:15 logger.go:21: Successfully created task response. Task: {{3893806860 2 2 * 300ms}}
+INFO: 2025/03/03 23:49:16 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:49:16 logger.go:21: Successfully decoded task result: {3893806860 4 nil}. Task id: 3893806860
+INFO: 2025/03/03 23:49:16 logger.go:21: Successfully updated expression result. Result: 4. Task id: 3893806860
+INFO: 2025/03/03 23:49:17 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:49:17 logger.go:21: Successfully decoded task result: {416540276 6 nil}. Task id: 416540276
+INFO: 2025/03/03 23:49:17 logger.go:21: Successfully updated expression result. Result: 6. Task id: 416540276
+INFO: 2025/03/03 23:49:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:18 logger.go:21: Successfully got task from manager. Received task id: 271097123
+INFO: 2025/03/03 23:49:18 logger.go:21: Successfully got expression by id from manager. Received expression: {271097123 0 0 nil true 0xc0003c7500 0xc0003c7570 + working 0}
+INFO: 2025/03/03 23:49:18 logger.go:21: Successfully created task response. Task: {{271097123 2 4 + 5s}}
+INFO: 2025/03/03 23:49:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:23 logger.go:21: Received post task result request
+INFO: 2025/03/03 23:49:23 logger.go:21: Successfully decoded task result: {271097123 6 nil}. Task id: 271097123
+INFO: 2025/03/03 23:49:23 logger.go:21: Successfully updated expression result. Result: 6. Task id: 271097123
+INFO: 2025/03/03 23:49:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:49:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:49:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:36 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:39 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:39 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:42 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:42 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:45 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:45 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:48 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:48 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:51 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:51 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:54 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:54 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:50:57 logger.go:21: Received get task request
+INFO: 2025/03/03 23:50:57 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:00 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:00 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:03 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:03 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:06 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:06 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:09 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:09 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:12 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:12 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:15 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:15 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:18 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:18 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:21 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:21 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:24 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:24 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:27 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:27 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:30 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:30 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:33 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:33 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:36 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:51:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:51:58 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:01 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:01 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:04 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:04 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:07 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:07 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:10 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:10 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:13 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:13 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:16 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:16 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:19 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:19 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:22 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:22 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:25 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:25 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:28 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:28 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:31 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:31 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:34 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:34 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:37 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:52:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:52:58 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:01 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:01 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:04 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:04 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:07 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:07 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:10 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:10 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:13 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:13 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:16 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:16 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:19 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:19 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:22 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:22 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:25 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:25 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:28 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:28 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:31 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:31 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:34 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:34 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:37 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:53:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:53:58 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:01 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:01 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:04 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:04 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:07 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:07 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:10 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:10 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:13 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:13 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:16 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:16 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:19 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:19 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:22 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:22 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:25 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:25 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:28 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:28 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:31 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:31 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:34 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:34 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:37 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:54:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:54:58 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:01 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:01 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:04 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:04 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:07 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:07 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:10 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:10 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:13 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:13 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:16 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:16 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:19 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:19 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:22 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:22 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:25 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:25 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:28 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:28 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:31 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:31 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:34 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:34 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:37 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:55:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:55:58 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:01 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:01 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:04 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:04 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:07 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:07 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:10 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:10 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:13 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:13 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:16 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:16 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:19 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:19 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:22 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:22 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:25 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:25 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:28 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:28 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:31 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:31 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:34 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:34 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:37 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:56:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:56:58 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:01 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:01 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:04 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:04 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:07 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:07 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:10 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:10 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:13 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:13 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:16 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:16 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:19 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:19 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:22 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:22 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:25 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:25 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:28 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:28 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:31 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:31 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:34 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:34 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:37 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:40 logger.go:21: Received get expression by id request: 271097123
+INFO: 2025/03/03 23:57:40 logger.go:21: Received get expression by id request: 271097123
+INFO: 2025/03/03 23:57:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:57:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:57:58 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:01 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:01 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:04 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:04 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:07 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:07 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:10 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:10 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:13 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:13 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:16 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:16 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:19 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:19 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:22 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:22 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:25 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:25 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:28 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:28 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:31 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:31 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:34 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:34 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:37 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:58:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:58:58 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:01 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:01 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:04 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:04 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:07 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:07 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:10 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:10 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:13 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:13 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:16 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:16 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:19 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:19 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:22 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:22 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:25 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:25 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:28 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:28 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:31 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:31 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:34 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:34 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:37 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:37 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:40 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:40 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:43 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:43 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:46 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:46 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:49 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:49 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:52 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:52 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:55 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:55 logger.go:21: Queue is empty
+INFO: 2025/03/03 23:59:58 logger.go:21: Received get task request
+INFO: 2025/03/03 23:59:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:00:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:00:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:28 logger.go:21: Received get expression by id request: :id
+INFO: 2025/03/04 00:01:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:01:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:01:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:40 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/04 00:02:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:43 logger.go:21: Successfully got task from manager. Received task id: 1533544035
+INFO: 2025/03/04 00:02:43 logger.go:21: Successfully got expression by id from manager. Received expression: {1533544035 796125257 796125257 right false 0xc0000cc310 0xc0000cc380 * working 0}
+INFO: 2025/03/04 00:02:43 logger.go:21: Successfully created task response. Task: {{1533544035 2 2 * 300ms}}
+INFO: 2025/03/04 00:02:44 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:02:44 logger.go:21: Successfully decoded task result: {1533544035 4 nil}. Task id: 1533544035
+INFO: 2025/03/04 00:02:44 logger.go:21: Successfully updated expression result. Result: 4. Task id: 1533544035
+INFO: 2025/03/04 00:02:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:46 logger.go:21: Successfully got task from manager. Received task id: 796125257
+INFO: 2025/03/04 00:02:46 logger.go:21: Successfully got expression by id from manager. Received expression: {796125257 0 0 nil true 0xc0000cc230 0xc0000cc2a0 + working 0}
+INFO: 2025/03/04 00:02:46 logger.go:21: Successfully created task response. Task: {{796125257 2 4 + 5s}}
+INFO: 2025/03/04 00:02:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:51 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:02:51 logger.go:21: Successfully decoded task result: {796125257 6 nil}. Task id: 796125257
+INFO: 2025/03/04 00:02:51 logger.go:21: Successfully updated expression result. Result: 6. Task id: 796125257
+INFO: 2025/03/04 00:02:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:02:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:02:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:27 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/04 00:03:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:28 logger.go:21: Successfully got task from manager. Received task id: 3284472666
+INFO: 2025/03/04 00:03:28 logger.go:21: Successfully got expression by id from manager. Received expression: {3284472666 3153900432 3153900432 right false 0xc0000cca80 0xc0000ccaf0 * working 0}
+INFO: 2025/03/04 00:03:28 logger.go:21: Successfully created task response. Task: {{3284472666 2 2 * 300ms}}
+INFO: 2025/03/04 00:03:29 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:03:29 logger.go:21: Successfully decoded task result: {3284472666 4 nil}. Task id: 3284472666
+INFO: 2025/03/04 00:03:29 logger.go:21: Successfully updated expression result. Result: 4. Task id: 3284472666
+INFO: 2025/03/04 00:03:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:31 logger.go:21: Successfully got task from manager. Received task id: 3153900432
+INFO: 2025/03/04 00:03:31 logger.go:21: Successfully got expression by id from manager. Received expression: {3153900432 0 0 nil true 0xc0000cc9a0 0xc0000cca10 + working 0}
+INFO: 2025/03/04 00:03:31 logger.go:21: Successfully created task response. Task: {{3153900432 2 4 + 5s}}
+INFO: 2025/03/04 00:03:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:36 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:03:36 logger.go:21: Successfully decoded task result: {3153900432 6 nil}. Task id: 3153900432
+INFO: 2025/03/04 00:03:36 logger.go:21: Successfully updated expression result. Result: 6. Task id: 3153900432
+INFO: 2025/03/04 00:03:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:03:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:03:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:04:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:04:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:05:58 logger.go:21: Received get expression by id request: defaultID
+INFO: 2025/03/04 00:05:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:05:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:06:50 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/04 00:06:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:53 logger.go:21: Successfully got task from manager. Received task id: 2966022530
+INFO: 2025/03/04 00:06:53 logger.go:21: Successfully got expression by id from manager. Received expression: {2966022530 2298092789 2298092789 right false 0xc0000184d0 0xc000018540 * working 0}
+INFO: 2025/03/04 00:06:53 logger.go:21: Successfully created task response. Task: {{2966022530 2 2 * 300ms}}
+INFO: 2025/03/04 00:06:53 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:06:53 logger.go:21: Successfully decoded task result: {2966022530 4 nil}. Task id: 2966022530
+INFO: 2025/03/04 00:06:53 logger.go:21: Successfully updated expression result. Result: 4. Task id: 2966022530
+INFO: 2025/03/04 00:06:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:56 logger.go:21: Successfully got task from manager. Received task id: 2298092789
+INFO: 2025/03/04 00:06:56 logger.go:21: Successfully got expression by id from manager. Received expression: {2298092789 0 0 nil true 0xc0000183f0 0xc000018460 + working 0}
+INFO: 2025/03/04 00:06:56 logger.go:21: Successfully created task response. Task: {{2298092789 2 4 + 5s}}
+INFO: 2025/03/04 00:06:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:06:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:01 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:07:01 logger.go:21: Successfully decoded task result: {2298092789 6 nil}. Task id: 2298092789
+INFO: 2025/03/04 00:07:01 logger.go:21: Successfully updated expression result. Result: 6. Task id: 2298092789
+INFO: 2025/03/04 00:07:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:18 logger.go:21: Received get expression by id request: undefined
+INFO: 2025/03/04 00:07:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:07:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:07:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:08:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:08:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:11 logger.go:21: Received get expression by id request: undefined
+INFO: 2025/03/04 00:09:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:25 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/04 00:09:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:26 logger.go:21: Successfully got task from manager. Received task id: 3666913782
+INFO: 2025/03/04 00:09:26 logger.go:21: Successfully got expression by id from manager. Received expression: {3666913782 523727877 523727877 right false 0xc000018af0 0xc000018b60 * working 0}
+INFO: 2025/03/04 00:09:26 logger.go:21: Successfully created task response. Task: {{3666913782 2 2 * 300ms}}
+INFO: 2025/03/04 00:09:26 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:09:26 logger.go:21: Successfully decoded task result: {3666913782 4 nil}. Task id: 3666913782
+INFO: 2025/03/04 00:09:26 logger.go:21: Successfully updated expression result. Result: 4. Task id: 3666913782
+INFO: 2025/03/04 00:09:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:29 logger.go:21: Successfully got task from manager. Received task id: 523727877
+INFO: 2025/03/04 00:09:29 logger.go:21: Successfully got expression by id from manager. Received expression: {523727877 0 0 nil true 0xc000018a10 0xc000018a80 + working 0}
+INFO: 2025/03/04 00:09:29 logger.go:21: Successfully created task response. Task: {{523727877 2 4 + 5s}}
+INFO: 2025/03/04 00:09:30 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/04 00:09:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:32 logger.go:21: Successfully got task from manager. Received task id: 3479746120
+INFO: 2025/03/04 00:09:32 logger.go:21: Successfully got expression by id from manager. Received expression: {3479746120 2675286402 2675286402 right false 0xc000110af0 0xc000110b60 * working 0}
+INFO: 2025/03/04 00:09:32 logger.go:21: Successfully created task response. Task: {{3479746120 2 2 * 300ms}}
+INFO: 2025/03/04 00:09:32 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:09:32 logger.go:21: Successfully decoded task result: {3479746120 4 nil}. Task id: 3479746120
+INFO: 2025/03/04 00:09:32 logger.go:21: Successfully updated expression result. Result: 4. Task id: 3479746120
+INFO: 2025/03/04 00:09:34 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:09:34 logger.go:21: Successfully decoded task result: {523727877 6 nil}. Task id: 523727877
+INFO: 2025/03/04 00:09:34 logger.go:21: Successfully updated expression result. Result: 6. Task id: 523727877
+INFO: 2025/03/04 00:09:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:35 logger.go:21: Successfully got task from manager. Received task id: 2675286402
+INFO: 2025/03/04 00:09:35 logger.go:21: Successfully got expression by id from manager. Received expression: {2675286402 0 0 nil true 0xc000110a10 0xc000110a80 + working 0}
+INFO: 2025/03/04 00:09:35 logger.go:21: Successfully created task response. Task: {{2675286402 2 4 + 5s}}
+INFO: 2025/03/04 00:09:36 logger.go:21: Received get expression by id request: undefined
+INFO: 2025/03/04 00:09:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:40 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:09:40 logger.go:21: Successfully decoded task result: {2675286402 6 nil}. Task id: 2675286402
+INFO: 2025/03/04 00:09:40 logger.go:21: Successfully updated expression result. Result: 6. Task id: 2675286402
+INFO: 2025/03/04 00:09:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:42 logger.go:21: Received get expression by id request: undefined
+INFO: 2025/03/04 00:09:43 logger.go:21: Received get expression by id request: undefined
+INFO: 2025/03/04 00:09:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:45 logger.go:21: Received get expression by id request: undefined
+INFO: 2025/03/04 00:09:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:09:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:09:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:10:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:10:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:11:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:11:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:12:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:12:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:13:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:13:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:33 logger.go:21: Received calculate request: 2+2*2
+INFO: 2025/03/04 00:14:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:35 logger.go:21: Successfully got task from manager. Received task id: 3041348148
+INFO: 2025/03/04 00:14:35 logger.go:21: Successfully got expression by id from manager. Received expression: {3041348148 1837662410 1837662410 right false 0xc000018620 0xc000018690 * working 0}
+INFO: 2025/03/04 00:14:35 logger.go:21: Successfully created task response. Task: {{3041348148 2 2 * 300ms}}
+INFO: 2025/03/04 00:14:36 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:14:36 logger.go:21: Successfully decoded task result: {3041348148 4 nil}. Task id: 3041348148
+INFO: 2025/03/04 00:14:36 logger.go:21: Successfully updated expression result. Result: 4. Task id: 3041348148
+INFO: 2025/03/04 00:14:36 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:36 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:38 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:38 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:38 logger.go:21: Successfully got task from manager. Received task id: 1837662410
+INFO: 2025/03/04 00:14:38 logger.go:21: Successfully got expression by id from manager. Received expression: {1837662410 0 0 nil true 0xc000018380 0xc0000185b0 + working 0}
+INFO: 2025/03/04 00:14:38 logger.go:21: Successfully created task response. Task: {{1837662410 2 4 + 5s}}
+INFO: 2025/03/04 00:14:39 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:39 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:41 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:41 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:42 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:42 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:43 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:43 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:43 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:14:43 logger.go:21: Successfully decoded task result: {1837662410 6 nil}. Task id: 1837662410
+INFO: 2025/03/04 00:14:43 logger.go:21: Successfully updated expression result. Result: 6. Task id: 1837662410
+INFO: 2025/03/04 00:14:44 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:44 logger.go:21: Received get expression by id request: 1837662410
+INFO: 2025/03/04 00:14:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:14:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:14:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:15:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:15:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:16:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:16:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:17:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:17:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:18:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:18:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:19:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:19:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:20:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:20:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:14 logger.go:21: Received get expressions request
+INFO: 2025/03/04 00:21:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:21:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:21:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:22:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:22:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:23:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:23:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:24:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:24:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:01 logger.go:21: Received calculate request: incorrect expression
+INFO: 2025/03/04 00:25:01 logger.go:21: Error after ParseExpr: 1:11: expected 'EOF', found expression
+INFO: 2025/03/04 00:25:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:25:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:25:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:21 logger.go:21: Received calculate request: 2+2*(1+7)/(2*2)/(2-2)
+INFO: 2025/03/04 00:26:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:21 logger.go:21: Successfully got task from manager. Received task id: 513850255
+INFO: 2025/03/04 00:26:21 logger.go:21: Successfully got expression by id from manager. Received expression: {513850255 3157815170 2325435864 right false 0xc000110540 0xc0001105b0 + working 0}
+INFO: 2025/03/04 00:26:21 logger.go:21: Successfully created task response. Task: {{513850255 1 7 + 5s}}
+INFO: 2025/03/04 00:26:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:24 logger.go:21: Successfully got task from manager. Received task id: 3419720709
+INFO: 2025/03/04 00:26:24 logger.go:21: Successfully got expression by id from manager. Received expression: {3419720709 2485970507 2325435864 right false 0xc000110620 0xc000110690 * working 0}
+INFO: 2025/03/04 00:26:24 logger.go:21: Successfully created task response. Task: {{3419720709 2 2 * 300ms}}
+INFO: 2025/03/04 00:26:25 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:26:25 logger.go:21: Successfully decoded task result: {3419720709 4 nil}. Task id: 3419720709
+INFO: 2025/03/04 00:26:25 logger.go:21: Successfully updated expression result. Result: 4. Task id: 3419720709
+INFO: 2025/03/04 00:26:26 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:26:26 logger.go:21: Successfully decoded task result: {513850255 8 nil}. Task id: 513850255
+INFO: 2025/03/04 00:26:26 logger.go:21: Successfully updated expression result. Result: 8. Task id: 513850255
+INFO: 2025/03/04 00:26:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:27 logger.go:21: Successfully got task from manager. Received task id: 956801500
+INFO: 2025/03/04 00:26:27 logger.go:21: Successfully got expression by id from manager. Received expression: {956801500 3338447586 2325435864 right false 0xc000110700 0xc000110770 - working 0}
+INFO: 2025/03/04 00:26:27 logger.go:21: Successfully created task response. Task: {{956801500 2 2 - 200ms}}
+INFO: 2025/03/04 00:26:27 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:27 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:27 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:26:27 logger.go:21: Successfully decoded task result: {956801500 0 nil}. Task id: 956801500
+INFO: 2025/03/04 00:26:27 logger.go:21: Successfully updated expression result. Result: 0. Task id: 956801500
+INFO: 2025/03/04 00:26:29 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:29 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:30 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:30 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:30 logger.go:21: Successfully got task from manager. Received task id: 3157815170
+INFO: 2025/03/04 00:26:30 logger.go:21: Successfully got expression by id from manager. Received expression: {3157815170 2485970507 2325435864 left false 0xc000110460 0xc0001104d0 * working 0}
+INFO: 2025/03/04 00:26:30 logger.go:21: Successfully created task response. Task: {{3157815170 2 8 * 300ms}}
+INFO: 2025/03/04 00:26:31 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:26:31 logger.go:21: Successfully decoded task result: {3157815170 16 nil}. Task id: 3157815170
+INFO: 2025/03/04 00:26:31 logger.go:21: Successfully updated expression result. Result: 16. Task id: 3157815170
+INFO: 2025/03/04 00:26:31 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:31 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:31 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:31 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:32 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:32 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:33 logger.go:21: Successfully got task from manager. Received task id: 2485970507
+INFO: 2025/03/04 00:26:33 logger.go:21: Successfully got expression by id from manager. Received expression: {2485970507 3338447586 2325435864 left false 0xc000110380 0xc0001103f0 / working 0}
+INFO: 2025/03/04 00:26:33 logger.go:21: Successfully created task response. Task: {{2485970507 16 4 / 400ms}}
+INFO: 2025/03/04 00:26:33 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:33 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:34 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:26:34 logger.go:21: Successfully decoded task result: {2485970507 4 nil}. Task id: 2485970507
+INFO: 2025/03/04 00:26:34 logger.go:21: Successfully updated expression result. Result: 4. Task id: 2485970507
+INFO: 2025/03/04 00:26:34 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:34 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:35 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:35 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:36 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:36 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:36 logger.go:21: Successfully got task from manager. Received task id: 3338447586
+INFO: 2025/03/04 00:26:36 logger.go:21: Successfully got expression by id from manager. Received expression: {3338447586 2325435864 2325435864 right false 0xc0001102a0 0xc000110310 / working 0}
+INFO: 2025/03/04 00:26:36 logger.go:21: Successfully created task response. Task: {{3338447586 4 0 / 400ms}}
+INFO: 2025/03/04 00:26:37 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:37 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:37 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:26:37 logger.go:21: Successfully decoded task result: {3338447586 0 division by zero}. Task id: 3338447586
+INFO: 2025/03/04 00:26:37 logger.go:21: Successfully updated expression result. Result: 0. Task id: 3338447586
+INFO: 2025/03/04 00:26:37 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:37 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:39 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:39 logger.go:21: Received get expression by id request: 2325435864
+INFO: 2025/03/04 00:26:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:39 logger.go:21: Successfully got task from manager. Received task id: 2325435864
+INFO: 2025/03/04 00:26:39 logger.go:21: Successfully got expression by id from manager. Received expression: {2325435864 0 0 nil true 0xc0001101c0 0xc000110230 + division by zero 0}
+INFO: 2025/03/04 00:26:39 logger.go:21: Successfully created task response. Task: {{2325435864 2 0 + 5s}}
+INFO: 2025/03/04 00:26:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:44 logger.go:21: Received post task result request
+INFO: 2025/03/04 00:26:44 logger.go:21: Successfully decoded task result: {2325435864 2 nil}. Task id: 2325435864
+INFO: 2025/03/04 00:26:44 logger.go:21: Successfully updated expression result. Result: 2. Task id: 2325435864
+INFO: 2025/03/04 00:26:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:26:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:26:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:27:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:27:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:36 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:36 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:39 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:39 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:42 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:42 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:45 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:45 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:48 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:48 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:51 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:51 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:54 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:54 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:28:57 logger.go:21: Received get task request
+INFO: 2025/03/04 00:28:57 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:00 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:00 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:03 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:03 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:06 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:06 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:09 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:09 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:12 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:12 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:15 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:15 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:18 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:18 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:21 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:21 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:24 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:24 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:27 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:27 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:30 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:30 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:33 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:33 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:29:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:29:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:30:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:30:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:50 logger.go:21: Received calculate request: incorrect expression
+INFO: 2025/03/04 00:31:50 logger.go:21: Error after ParseExpr: 1:11: expected 'EOF', found expression
+INFO: 2025/03/04 00:31:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:31:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:31:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:32:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:32:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:33:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:33:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:07 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:07 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:10 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:10 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:13 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:13 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:16 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:16 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:19 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:19 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:22 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:22 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:25 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:25 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:28 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:28 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:31 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:31 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:34 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:34 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:37 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:37 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:40 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:40 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:43 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:43 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:46 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:46 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:49 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:49 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:52 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:52 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:55 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:55 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:34:58 logger.go:21: Received get task request
+INFO: 2025/03/04 00:34:58 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:01 logger.go:21: Received calculate request: incorrect expression
+INFO: 2025/03/04 00:35:01 logger.go:21: Error after ParseExpr: 1:11: expected 'EOF', found expression
+INFO: 2025/03/04 00:35:01 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:01 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:04 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:04 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:15 main.go:35: Orchestrator server started on port 8080
+INFO: 2025/03/04 00:35:20 logger.go:21: Received calculate request: incorrect expression
+INFO: 2025/03/04 00:35:20 logger.go:21: Error after ParseExpr: 1:11: expected 'EOF', found expression
+INFO: 2025/03/04 00:35:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:48 logger.go:21: Received calculate request: incorrect expression
+INFO: 2025/03/04 00:35:48 logger.go:21: Error after ParseExpr: 1:11: expected 'EOF', found expression
+INFO: 2025/03/04 00:35:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:35:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:35:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:36:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:36:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:07 logger.go:21: Received get expression by id request: 0
+INFO: 2025/03/04 00:37:07 logger.go:21: Received get expression by id request: 0
+INFO: 2025/03/04 00:37:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:50 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:53 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:53 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:56 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:56 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:37:59 logger.go:21: Received get task request
+INFO: 2025/03/04 00:37:59 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:02 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:02 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:05 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:05 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:08 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:08 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:11 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:11 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:14 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:14 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:17 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:17 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:20 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:20 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:23 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:23 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:26 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:26 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:29 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:29 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:32 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:32 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:35 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:35 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:38 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:38 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:41 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:41 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:44 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:44 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:47 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:47 logger.go:21: Queue is empty
+INFO: 2025/03/04 00:38:50 logger.go:21: Received get task request
+INFO: 2025/03/04 00:38:50 logger.go:21: Queue is empty
