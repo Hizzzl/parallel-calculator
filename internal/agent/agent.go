@@ -61,7 +61,7 @@ func SendTaskResult(taskResult TaskResult) error {
 	logger.INFO.Println("Sending task result: ", taskResult)
 	resp, err := http.Post("http://localhost:8080/internal/task", "application/json",
 		strings.NewReader(`{"id":`+strconv.Itoa(int(taskResult.ID))+
-			`,"result":`+strconv.Itoa(int(taskResult.Result))+
+			`,"result":`+strconv.FormatFloat(taskResult.Result, 'f', -1, 64)+
 			`,"error":"`+taskResult.Error+`"}`))
 	if err != nil {
 		logger.ERROR.Println("Failed to send task result: ", err)
