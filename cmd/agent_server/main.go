@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	config.InitConfig("configs/.env")
+	config.InitConfig(".env")
 	logger.InitAgentLogger()
 	defer logger.CloseLogger()
 

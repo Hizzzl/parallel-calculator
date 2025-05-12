@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package task;
+
+option go_package = "./proto";
+
+// Сервис для взаимодействия оркестратора с агентами
+service TaskService {
+  // Получение задачи агентом
+  rpc GetTask(GetTaskRequest) returns (GetTaskResponse);
+  
+  // Отправка результата задачи
+  rpc SendTaskResult(TaskResultRequest) returns (TaskResultResponse);
+}
+
+// Запрос на получение задачи (пустой)
+message GetTaskRequest {
+  // Может быть расширен в будущем
+}
+
+// Ответ с задачей
+message GetTaskResponse {
+  // Если нет задачи, все поля будут иметь значения по умолчанию
+  bool has_task = 1; // true если задача есть, false если очередь пуста
+  uint32 id = 2;
+  double left_value = 3;
+  double right_value = 4;
+  string operator = 5;
+  int64 operation_time_ns = 6; // время операции в наносекундах
+}
+
+// Запрос на отправку результата задачи
+message TaskResultRequest {
+  uint32 id = 1;
+  double result = 2;
+  string error = 3; // "nil" если ошибок нет
+}
+
+// Ответ на отправку результата задачи
+message TaskResultResponse {
+  bool success = 1;
+  string error = 2; // пустая строка, если ошибок нет
+}

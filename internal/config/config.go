@@ -20,6 +20,11 @@ type Config struct {
 	TimeDivision        time.Duration
 	AgentRequestTimeout time.Duration
 	ServerPort          string
+	OrchestratorBaseURL string
+	// База данных и аутентификация
+	DBPath              string
+	JWTSecret           string
+	JWTExpirationMinutes int
 }
 
 var (
@@ -106,20 +111,51 @@ func InitConfig(configPath string) {
 	if os.Getenv("AGENT_REQUEST_TIMEOUT_MS") != "" {
 		value, err := strconv.Atoi(os.Getenv("AGENT_REQUEST_TIMEOUT_MS"))
 		if err != nil {
-			log.Println("AGENT_REQUEST_TIMEOUT_MS not a number. Auto set to 500ms")
-			AppConfig.AgentRequestTimeout = 500 * time.Millisecond
+			log.Fatal("AGENT_REQUEST_TIMEOUT_MS not a number")
 		}
 		AppConfig.AgentRequestTimeout = time.Duration(value) * time.Millisecond
 	} else {
-		log.Println("AGENT_REQUEST_TIMEOUT_MS not set. Auto set to 500ms")
-		AppConfig.AgentRequestTimeout = 500 * time.Millisecond
+		log.Fatal("AGENT_REQUEST_TIMEOUT_MS not set")
 	}
 
 	if os.Getenv("SERVER_PORT") != "" {
-		value := os.Getenv("SERVER_PORT")
-		AppConfig.ServerPort = value
+		AppConfig.ServerPort = os.Getenv("SERVER_PORT")
 	} else {
-		log.Println("SERVER_PORT not set. Auto set to 8080")
 		AppConfig.ServerPort = "8080"
+	}
+
+	if os.Getenv("ORCHESTRATOR_BASE_URL") != "" {
+		AppConfig.OrchestratorBaseURL = os.Getenv("ORCHESTRATOR_BASE_URL")
+	} else {
+		AppConfig.OrchestratorBaseURL = "http://localhost:8080"
+	}
+
+	// Инициализация параметров базы данных
+	if os.Getenv("DB_PATH") != "" {
+		AppConfig.DBPath = os.Getenv("DB_PATH")
+	} else {
+		AppConfig.DBPath = "./data/calculator.db"
+		log.Println("Using default DB_PATH: ./data/calculator.db")
+	}
+
+	if os.Getenv("JWT_SECRET") != "" {
+		AppConfig.JWTSecret = os.Getenv("JWT_SECRET")
+	} else {
+		log.Println("WARNING: Using default JWT_SECRET. This is insecure for production!")
+		AppConfig.JWTSecret = "your-secret-key-for-jwt-signing"
+	}
+
+	// Срок действия JWT токена в часах
+	if os.Getenv("JWT_EXPIRATION_MINUTES") != "" {
+		expiration, err := strconv.Atoi(os.Getenv("JWT_EXPIRATION_MINUTES"))
+		if err != nil {
+			log.Println("WARNING: JWT_EXPIRATION_MINUTES not a valid number, using default value of 1440 minutes (24 hours)")
+			AppConfig.JWTExpirationMinutes = 1440
+		} else {
+			AppConfig.JWTExpirationMinutes = expiration
+		}
+	} else {
+		log.Println("JWT_EXPIRATION_MINUTES not set, using default value of 1440 minutes (24 hours)")
+		AppConfig.JWTExpirationMinutes = 1440
 	}
 }
