@@ -17,6 +17,8 @@ var (
 
 // CreateUser создает нового пользователя в базе данных
 func CreateUser(login, password string) (*User, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	// Проверяем, что пользователь уже существует
 	var count int
 	err := DB.QueryRow("SELECT COUNT(*) FROM users WHERE login = ?", login).Scan(&count)
@@ -58,6 +60,8 @@ func CreateUser(login, password string) (*User, error) {
 
 // GetUserByID получает пользователя по ID
 func GetUserByID(id int64) (*User, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	var user User
 	var createdAtStr string
 
@@ -100,6 +104,8 @@ func GetUserByID(id int64) (*User, error) {
 
 // GetUserByLogin получает пользователя по логину
 func GetUserByLogin(login string) (*User, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	var user User
 	var createdAtStr string
 
@@ -142,6 +148,7 @@ func GetUserByLogin(login string) (*User, error) {
 
 // AuthenticateUser проверяет, действительны ли предоставленные учетные данные
 func AuthenticateUser(login, password string) (*User, error) {
+	// Здесь мьютекс не нужен, т.к. мы вызываем GetUserByLogin, где уже есть мьютекс
 	user, err := GetUserByLogin(login)
 	if err != nil {
 		return nil, err

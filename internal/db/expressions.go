@@ -13,6 +13,8 @@ var (
 
 // CreateExpression создает новое выражение в базе данных
 func CreateExpression(userID int64, expression string) (*Expression, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	res, err := DB.Exec(
 		`INSERT INTO expressions (user_id, original_expression, status) VALUES (?, ?, ?)`,
 		userID, expression, StatusPending,
@@ -36,6 +38,8 @@ func CreateExpression(userID int64, expression string) (*Expression, error) {
 
 // GetExpressionByID получает выражение по ID
 func GetExpressionByID(id int64) (*Expression, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	var expr Expression
 	var createdAtStr, updatedAtStr string
 	var result sql.NullFloat64
@@ -92,6 +96,8 @@ func GetExpressionByID(id int64) (*Expression, error) {
 
 // UpdateExpressionStatus обновляет статус выражения
 func UpdateExpressionStatus(id int64, status string) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	_, err := DB.Exec(
 		"UPDATE expressions SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
 		status, id,
@@ -101,6 +107,8 @@ func UpdateExpressionStatus(id int64, status string) error {
 
 // SetExpressionResult устанавливает результат выражения
 func SetExpressionResult(id int64, result float64) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	_, err := DB.Exec(
 		`UPDATE expressions 
          SET result = ?, status = ?, updated_at = CURRENT_TIMESTAMP 
@@ -112,6 +120,8 @@ func SetExpressionResult(id int64, result float64) error {
 
 // SetExpressionError устанавливает ошибку для выражения
 func SetExpressionError(id int64, errorMessage string) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	_, err := DB.Exec(
 		`UPDATE expressions 
          SET error_message = ?, status = ?, updated_at = CURRENT_TIMESTAMP 
@@ -123,6 +133,8 @@ func SetExpressionError(id int64, errorMessage string) error {
 
 // GetUserExpressions получает все выражения пользователя
 func GetUserExpressions(userID int64) ([]*Expression, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	rows, err := DB.Query(
 		`SELECT id, user_id, original_expression, status, result, 
          error_message, created_at, updated_at 

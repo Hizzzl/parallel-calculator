@@ -13,6 +13,8 @@ var (
 // CreateOperation создает новую операцию в базе данных
 func CreateOperation(expressionID int64, parentOpID *int64, operator string,
 	leftValue, rightValue *float64, isRoot bool, childPosition *string) (*Operation, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 
 	// Если оба значения аргументов предоставлены, операция готова к обработке
 	initialStatus := StatusPending
@@ -60,6 +62,8 @@ func CreateOperation(expressionID int64, parentOpID *int64, operator string,
 
 // GetOperationByID получает операцию по ID
 func GetOperationByID(id int64) (*Operation, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	var op Operation
 	var createdAtStr, updatedAtStr string
 	var parentOpID sql.NullInt64
@@ -138,6 +142,8 @@ func GetOperationByID(id int64) (*Operation, error) {
 
 // GetOperationsByExpressionID получает все операции для выражения
 func GetOperationsByExpressionID(expressionID int64) ([]*Operation, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	rows, err := DB.Query(
 		`SELECT id, expression_id, parent_operation_id, child_position, left_value, right_value,
 		operator, status, result, is_root_expression, created_at, updated_at
@@ -228,8 +234,10 @@ func GetOperationsByExpressionID(expressionID int64) ([]*Operation, error) {
 
 // UpdateOperationStatus обновляет статус операции
 func UpdateOperationStatus(id int64, status string) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	_, err := DB.Exec(
-		"UPDATE operations SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+		"UPDATE operations SET status = ?, updated_at = datetime('now') WHERE id = ?",
 		status, id,
 	)
 
@@ -244,13 +252,14 @@ func UpdateOperationStatus(id int64, status string) error {
 			"SELECT is_root_expression, expression_id, result FROM operations WHERE id = ?",
 			id,
 		).Scan(&isRoot, &expressionID, &result)
-
 		if err != nil {
 			return err
 		}
 
 		if isRoot {
+			DbMutex.Unlock()
 			err = SetExpressionResult(expressionID, result)
+			DbMutex.Lock()
 			if err != nil {
 				return err
 			}
@@ -262,6 +271,8 @@ func UpdateOperationStatus(id int64, status string) error {
 
 // SetOperationResult устанавливает результат операции
 func SetOperationResult(id int64, result float64) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	_, err := DB.Exec(
 		`UPDATE operations 
 		SET result = ?, status = ?, updated_at = CURRENT_TIMESTAMP 
@@ -288,7 +299,9 @@ func SetOperationResult(id int64, result float64) error {
 
 	// Если это корневая операция, обновляем результат выражения
 	if isRoot {
+		DbMutex.Unlock()
 		err = SetExpressionResult(expressionID, result)
+		DbMutex.Lock()
 		if err != nil {
 			return err
 		}
@@ -299,6 +312,10 @@ func SetOperationResult(id int64, result float64) error {
 
 // GetReadyOperation получает одну операцию, которая готова к обработке
 func GetReadyOperation() (*Operation, error) {
+	// Используем write lock, т.к. сразу после получения операции мы обновим её статус
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
+
 	var op Operation
 	var createdAtStr, updatedAtStr string
 	var parentOpID sql.NullInt64
@@ -381,6 +398,8 @@ func GetReadyOperation() (*Operation, error) {
 func CheckDependencies(id int64) error {
 	// Получаем операцию
 	op, err := GetOperationByID(id)
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	if err != nil {
 		return err
 	}
@@ -426,7 +445,10 @@ func CheckDependencies(id int64) error {
 
 	// Если все дочерние операции завершены или их нет, обновляем статус на 'готова'
 	if isReady && hasChildren {
-		return UpdateOperationStatus(id, StatusReady)
+		DbMutex.Unlock()
+		err := UpdateOperationStatus(id, StatusReady)
+		DbMutex.Lock()
+		return err
 	}
 
 	return nil
@@ -434,11 +456,63 @@ func CheckDependencies(id int64) error {
 
 // HandleOperationError обрабатывает ошибку операции и отменяет все связанные операции
 func HandleOperationError(operationID int64, errorMsg string) error {
-	// Получаем операцию для определения ID выражения
-	op, err := GetOperationByID(operationID)
+	// Блокируем мьютекс один раз на всю функцию
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
+
+	// Получаем операцию напрямую из БД без использования GetOperationByID
+	var op Operation
+	var createdAtStr, updatedAtStr string
+	var parentOpID sql.NullInt64
+	var childPosition sql.NullString
+	var leftValue, rightValue, result sql.NullFloat64
+	var isRoot bool
+
+	err := DB.QueryRow(
+		`SELECT id, expression_id, parent_operation_id, child_position, left_value, right_value,
+		operator, status, result, is_root_expression, created_at, updated_at
+		FROM operations 
+		WHERE id = ?`,
+		operationID,
+	).Scan(
+		&op.ID, &op.ExpressionID, &parentOpID, &childPosition, &leftValue, &rightValue,
+		&op.Operator, &op.Status, &result, &isRoot, &createdAtStr, &updatedAtStr,
+	)
+
 	if err != nil {
+		if err == sql.ErrNoRows {
+			return ErrOperationNotFound
+		}
 		return err
 	}
+
+	// Обрабатываем не null поля
+	if parentOpID.Valid {
+		val := parentOpID.Int64
+		op.ParentOpID = &val
+	}
+
+	if leftValue.Valid {
+		val := leftValue.Float64
+		op.LeftValue = &val
+	}
+
+	if rightValue.Valid {
+		val := rightValue.Float64
+		op.RightValue = &val
+	}
+
+	if childPosition.Valid {
+		val := childPosition.String
+		op.ChildPosition = &val
+	}
+
+	if result.Valid {
+		val := result.Float64
+		op.Result = &val
+	}
+
+	op.IsRootExpression = isRoot
 
 	// Начинаем транзакцию
 	tx, err := DB.Begin()
@@ -492,6 +566,8 @@ func HandleOperationError(operationID int64, errorMsg string) error {
 
 // UpdateOperation обновляет операцию в базе данных
 func UpdateOperation(op *Operation) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 	_, err := DB.Exec(
 		`UPDATE operations 
 		 SET parent_operation_id = ?, child_position = ?, left_value = ?, right_value = ?, 
@@ -506,8 +582,11 @@ func UpdateOperation(op *Operation) error {
 	return err
 }
 
-// UpdateOperationLeftValue обновляет левый аргумент операции
+// UpdateOperationLeftValue устанавливает левый операнд операции
 func UpdateOperationLeftValue(operationID int64, value float64) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
+
 	_, err := DB.Exec(
 		`UPDATE operations 
 		 SET left_value = ?, updated_at = CURRENT_TIMESTAMP 
@@ -517,8 +596,11 @@ func UpdateOperationLeftValue(operationID int64, value float64) error {
 	return err
 }
 
-// UpdateOperationRightValue обновляет правый аргумент операции
+// UpdateOperationRightValue устанавливает правый операнд операции
 func UpdateOperationRightValue(operationID int64, value float64) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
+
 	_, err := DB.Exec(
 		`UPDATE operations 
 		 SET right_value = ?, updated_at = CURRENT_TIMESTAMP 

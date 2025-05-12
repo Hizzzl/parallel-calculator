@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package task;
 
-option go_package = "./proto";
+option go_package = "parallel-calculator/proto/";
 
 // Сервис для взаимодействия оркестратора с агентами
 service TaskService {

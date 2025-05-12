@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 	"strconv"
+	"strings"
 	"sync"
 	"time"
 
@@ -21,6 +22,9 @@ type Config struct {
 	AgentRequestTimeout time.Duration
 	ServerPort          string
 	OrchestratorBaseURL string
+	// gRPC настройки
+	OrchestratorHost   string // Хост оркестратора для gRPC
+	OrchestratorPort   string // Порт оркестратора для HTTP
 	// База данных и аутентификация
 	DBPath              string
 	JWTSecret           string
@@ -128,6 +132,27 @@ func InitConfig(configPath string) {
 		AppConfig.OrchestratorBaseURL = os.Getenv("ORCHESTRATOR_BASE_URL")
 	} else {
 		AppConfig.OrchestratorBaseURL = "http://localhost:8080"
+	}
+	
+	// gRPC настройки не нужно инициализировать, т.к. всегда используем gRPC
+	
+	// Вытаскиваем из OrchestratorBaseURL хост и порт
+	// Предполагаем формат "http://host:port"
+	baseURL := AppConfig.OrchestratorBaseURL
+	// Удаляем "http://" или "https://"
+	baseURL = baseURL[strings.Index(baseURL, "://")+3:]
+	// Разделяем на хост и порт
+	parts := strings.Split(baseURL, ":")
+	if len(parts) >= 1 {
+		// Первая часть - хост
+		AppConfig.OrchestratorHost = parts[0]
+	}
+	if len(parts) >= 2 {
+		// Вторая часть - порт
+		AppConfig.OrchestratorPort = parts[1]
+	} else {
+		// По умолчанию - 8080
+		AppConfig.OrchestratorPort = "8080"
 	}
 
 	// Инициализация параметров базы данных

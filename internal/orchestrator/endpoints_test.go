@@ -1,397 +1,427 @@
-package orchestrator
+package orchestrator_test
 
-// import (
-// 	"bytes"
-// 	"encoding/json"
-// 	"errors"
-// 	"net/http"
-// 	"net/http/httptest"
-// 	"parallel-calculator/internal/config"
-// 	"testing"
-// 	"time"
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"net/http/httptest"
+	"parallel-calculator/internal/auth"
+	"parallel-calculator/internal/config"
+	"parallel-calculator/internal/db"
+	"parallel-calculator/internal/orchestrator"
+	"strconv"
+	"testing"
 
-// 	"github.com/gorilla/mux"
-// 	"github.com/stretchr/testify/assert"
-// 	"github.com/stretchr/testify/require"
-// )
+	"github.com/gorilla/mux"
 
-// func resetConfig() {
-// 	config.InitConfig("../../configs/.env")
-// }
+	_ "github.com/mattn/go-sqlite3" // Необходимо для работы с SQLite
+)
 
-// func TestHandleCalculate(t *testing.T) {
-// 	resetConfig()
+// createTestUser создает тестового пользователя и возвращает его ID и токен
+func createTestUser(t *testing.T) (int64, string) {
+	user, err := db.CreateUser("testuser", "password123")
+	if err != nil {
+		t.Fatalf("Failed to create test user: %v", err)
+	}
 
-// 	tests := []struct {
-// 		name               string
-// 		requestBody        string
-// 		expectedStatusCode int
-// 		expectedResponse   *CalculateResponse
-// 		setupMock          func()
-// 	}{
-// 		{
-// 			name:               "valid expression",
-// 			requestBody:        `{"expression":"2+2"}`,
-// 			expectedStatusCode: http.StatusCreated,
-// 			expectedResponse:   nil,
-// 			setupMock:          func() {},
-// 		},
-// 		{
-// 			name:               "invalid JSON body",
-// 			requestBody:        `{"expression"2+2"}`,
-// 			expectedStatusCode: http.StatusUnprocessableEntity,
-// 			expectedResponse:   nil,
-// 			setupMock:          func() {},
-// 		},
-// 		{
-// 			name:               "invalid expression",
-// 			requestBody:        `{"expression":"2++2"}`,
-// 			expectedStatusCode: http.StatusUnprocessableEntity,
-// 			expectedResponse:   nil,
-// 			setupMock:          func() {},
-// 		},
-// 	}
+	// Настраиваем конфигурацию JWT для тестов
+	if config.AppConfig.JWTSecret == "" {
+		config.AppConfig.JWTSecret = "test-secret-key"
+		config.AppConfig.JWTExpirationMinutes = 60
+	}
 
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			tt.setupMock()
+	// Генерируем JWT-токен для пользователя
+	token, err := auth.GenerateToken(user)
+	if err != nil {
+		t.Fatalf("Failed to generate token: %v", err)
+	}
 
-// 			req, err := http.NewRequest(http.MethodPost, "/calculate", bytes.NewBufferString(tt.requestBody))
-// 			require.NoError(t, err)
+	return user.ID, token
+}
 
-// 			rr := httptest.NewRecorder()
-// 			HandleCalculate(rr, req)
+// TestHandleCalculate проверяет корректную обработку запроса на вычисление
+func TestHandleCalculate(t *testing.T) {
+	// Инициализируем конфигурацию
+	config.InitConfig("../../.env")
+	// Устанавливаем базу данных в памяти для тестов
 
-// 			assert.Equal(t, tt.expectedStatusCode, rr.Code)
+	// Инициализируем базу данных, передаем путь к директории с schema.sql
+	err := db.InitDB("../../internal/db")
+	if err != nil {
+		t.Fatalf("Failed to initialize database: %v", err)
+	}
 
-// 			if tt.expectedStatusCode == http.StatusCreated {
-// 				var response CalculateResponse
-// 				err = json.Unmarshal(rr.Body.Bytes(), &response)
-// 				require.NoError(t, err)
-// 				assert.NotZero(t, response.ID, "Expected non-zero ID")
-// 			}
-// 		})
-// 	}
-// }
+	// Настраиваем тестовое окружение
+	defer db.CleanupDB()
 
-// func TestHandleGetExpressions(t *testing.T) {
-// 	tests := []struct {
-// 		name               string
-// 		setupExpressions   func()
-// 		expectedStatusCode int
-// 		expectedLength     int
-// 	}{
-// 		{
-// 			name: "empty expressions list",
-// 			setupExpressions: func() {
-// 				resetManager()
-// 				resetConfig()
-// 			},
-// 			expectedStatusCode: http.StatusOK,
-// 			expectedLength:     0,
-// 		},
-// 		{
-// 			name: "one expression",
-// 			setupExpressions: func() {
-// 				resetManager()
-// 				resetConfig()
-// 				expr := Expression{
-// 					id:         1,
-// 					status:     "done",
-// 					result:     42,
-// 					leftValue:  make(chan float64, 1),
-// 					rightValue: make(chan float64, 1),
-// 				}
-// 				ManagerInstance.StoreExpression(1, expr)
-// 			},
-// 			expectedStatusCode: http.StatusOK,
-// 			expectedLength:     1,
-// 		},
-// 		{
-// 			name: "multiple expressions",
-// 			setupExpressions: func() {
-// 				resetManager()
-// 				resetConfig()
-// 				ManagerInstance.StoreExpression(1, Expression{
-// 					id:         1,
-// 					status:     "done",
-// 					result:     42,
-// 					leftValue:  make(chan float64, 1),
-// 					rightValue: make(chan float64, 1),
-// 				})
-// 				ManagerInstance.StoreExpression(2, Expression{
-// 					id:         2,
-// 					status:     "waiting",
-// 					result:     0,
-// 					leftValue:  make(chan float64, 1),
-// 					rightValue: make(chan float64, 1),
-// 				})
-// 			},
-// 			expectedStatusCode: http.StatusOK,
-// 			expectedLength:     2,
-// 		},
-// 	}
+	// Создаем тестового пользователя
+	userID, token := createTestUser(t)
 
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			tt.setupExpressions()
+	// Тестовые случаи
+	tests := []struct {
+		name           string
+		body           string
+		expectedStatus int
+		withToken      bool
+		invalidToken   bool
+	}{
+		{
+			name:           "Valid expression",
+			body:           `{"expression": "2+2"}`,
+			expectedStatus: http.StatusCreated,
+			withToken:      true,
+		},
+		{
+			name:           "Invalid expression format",
+			body:           `{"expression": "2+"}`,
+			expectedStatus: http.StatusUnprocessableEntity,
+			withToken:      true,
+		},
+		{
+			name:           "Missing token",
+			body:           `{"expression": "2+2"}`,
+			expectedStatus: http.StatusUnauthorized,
+			withToken:      false,
+		},
+		{
+			name:           "Invalid token",
+			body:           `{"expression": "2+2"}`,
+			expectedStatus: http.StatusUnauthorized,
+			withToken:      true,
+			invalidToken:   true,
+		},
+		{
+			name:           "Invalid JSON",
+			body:           `{"expression": 123}`,
+			expectedStatus: http.StatusUnprocessableEntity,
+			withToken:      true,
+		},
+	}
 
-// 			req, err := http.NewRequest(http.MethodGet, "/expressions", nil)
-// 			require.NoError(t, err)
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// Подготавливаем запрос
+			req := httptest.NewRequest("POST", "/calculate", bytes.NewBufferString(tt.body))
+			req.Header.Set("Content-Type", "application/json")
 
-// 			rr := httptest.NewRecorder()
-// 			HandleGetExpressions(rr, req)
+			// Добавляем токен, если нужно
+			if tt.withToken {
+				tokenString := token
+				if tt.invalidToken {
+					tokenString = "invalid-token"
+				}
+				req.Header.Set("Authorization", "Bearer "+tokenString)
+			}
 
-// 			assert.Equal(t, tt.expectedStatusCode, rr.Code)
+			// Подготавливаем ResponseRecorder для получения ответа
+			rr := httptest.NewRecorder()
 
-// 			assert.Equal(t, "application/json", rr.Header().Get("Content-Type"))
+			// Вызываем тестируемый обработчик
+			orchestrator.HandleCalculate(rr, req)
 
-// 			var responses []ExpressionResponse
-// 			err = json.Unmarshal(rr.Body.Bytes(), &responses)
-// 			require.NoError(t, err)
-// 			assert.Equal(t, tt.expectedLength, len(responses))
-// 		})
-// 	}
-// }
+			// Проверяем код ответа
+			if rr.Code != tt.expectedStatus {
+				t.Errorf("Expected status code %d, got %d", tt.expectedStatus, rr.Code)
+			}
 
-// func TestHandleGetExpressionByID(t *testing.T) {
-// 	tests := []struct {
-// 		name               string
-// 		expressionID       string
-// 		setupExpression    func()
-// 		expectedStatusCode int
-// 		expectedResponse   *ExpressionResponse
-// 	}{
-// 		{
-// 			name:         "existing expression",
-// 			expressionID: "1",
-// 			setupExpression: func() {
-// 				resetManager()
-// 				resetConfig()
-// 				expr := Expression{
-// 					id:         1,
-// 					status:     "done",
-// 					result:     42,
-// 					leftValue:  make(chan float64, 1),
-// 					rightValue: make(chan float64, 1),
-// 				}
-// 				ManagerInstance.StoreExpression(1, expr)
-// 			},
-// 			expectedStatusCode: http.StatusOK,
-// 			expectedResponse: &ExpressionResponse{
-// 				ID:     1,
-// 				Status: "done",
-// 				Result: 42,
-// 			},
-// 		},
-// 		{
-// 			name:         "non-existing expression",
-// 			expressionID: "999",
-// 			setupExpression: func() {
-// 				resetManager()
-// 				resetConfig()
-// 			},
-// 			expectedStatusCode: http.StatusNotFound,
-// 			expectedResponse:   nil,
-// 		},
-// 		{
-// 			name:         "invalid ID format",
-// 			expressionID: "abc",
-// 			setupExpression: func() {
-// 				resetManager()
-// 				resetConfig()
-// 			},
-// 			expectedStatusCode: http.StatusInternalServerError,
-// 			expectedResponse:   nil,
-// 		},
-// 	}
+			// Для успешных запросов проверяем содержимое ответа
+			if tt.expectedStatus == http.StatusCreated {
+				var response orchestrator.CalculateResponse
+				if err := json.NewDecoder(rr.Body).Decode(&response); err != nil {
+					t.Fatalf("Failed to decode response: %v", err)
+				}
 
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			tt.setupExpression()
+				if response.ID <= 0 {
+					t.Errorf("Expected positive ID, got %d", response.ID)
+				}
 
-// 			req, err := http.NewRequest(http.MethodGet, "/expressions/"+tt.expressionID, nil)
-// 			require.NoError(t, err)
+				// Проверяем, что выражение записано в базу данных
+				expr, err := db.GetExpressionByID(response.ID)
+				if err != nil {
+					t.Fatalf("Failed to get expression from DB: %v", err)
+				}
 
-// 			rr := httptest.NewRecorder()
-// 			vars := map[string]string{
-// 				"id": tt.expressionID,
-// 			}
-// 			req = mux.SetURLVars(req, vars)
+				if expr.UserID != userID {
+					t.Errorf("Expected expression to be associated with user ID %d, got %d", userID, expr.UserID)
+				}
+			}
+		})
+	}
+}
 
-// 			HandleGetExpressionByID(rr, req)
+// TestHandleGetExpressions проверяет получение списка выражений пользователя
+func TestHandleGetExpressions(t *testing.T) {
+	// Инициализируем конфигурацию
+	config.InitConfig("../../.env")
+	// Устанавливаем базу данных в памяти для тестов
 
-// 			assert.Equal(t, tt.expectedStatusCode, rr.Code)
+	// Инициализируем базу данных, передаем путь к директории с schema.sql
+	err := db.InitDB("../../internal/db")
+	if err != nil {
+		t.Fatalf("Failed to initialize database: %v", err)
+	}
 
-// 			if tt.expectedStatusCode == http.StatusOK {
-// 				assert.Equal(t, "application/json", rr.Header().Get("Content-Type"))
+	defer db.CleanupDB()
 
-// 				var response ExpressionResponse
-// 				err = json.Unmarshal(rr.Body.Bytes(), &response)
-// 				require.NoError(t, err)
-// 				assert.Equal(t, tt.expectedResponse.ID, response.ID)
-// 				assert.Equal(t, tt.expectedResponse.Status, response.Status)
-// 				assert.Equal(t, tt.expectedResponse.Result, response.Result)
-// 			}
-// 		})
-// 	}
-// }
+	// Создаем тестового пользователя
+	userID, token := createTestUser(t)
 
-// func TestHandleGetTask(t *testing.T) {
-// 	tests := []struct {
-// 		name               string
-// 		setupQueue         func()
-// 		expectedStatusCode int
-// 		expectedTask       *TaskResponse
-// 	}{
-// 		{
-// 			name: "empty queue",
-// 			setupQueue: func() {
-// 				resetManager()
-// 				resetConfig()
-// 			},
-// 			expectedStatusCode: http.StatusNotFound,
-// 			expectedTask:       nil,
-// 		},
-// 		{
-// 			name: "task available",
-// 			setupQueue: func() {
-// 				resetManager()
-// 				resetConfig()
-// 				config.AppConfig.TimeAddition = 1 * time.Second
-// 				config.AppConfig.TimeSubtraction = 1 * time.Second
-// 				config.AppConfig.TimeMultiplication = 2 * time.Second
-// 				config.AppConfig.TimeDivision = 3 * time.Second
+	// Создаем несколько тестовых выражений для пользователя
+	expressions := []string{"1+1", "2*2", "3-1"}
+	for _, expr := range expressions {
+		_, err := orchestrator.ProcessExpression(expr, userID)
+		if err != nil {
+			t.Fatalf("Failed to create test expression: %v", err)
+		}
+	}
 
-// 				expr := Expression{
-// 					id:         1,
-// 					operator:   "+",
-// 					status:     "waiting",
-// 					leftValue:  make(chan float64, 1),
-// 					rightValue: make(chan float64, 1),
-// 				}
-// 				expr.leftValue <- 5
-// 				expr.rightValue <- 3
+	// Тестовые случаи
+	tests := []struct {
+		name           string
+		expectedStatus int
+		withToken      bool
+		invalidToken   bool
+		expectedCount  int
+	}{
+		{
+			name:           "Get user expressions",
+			expectedStatus: http.StatusOK,
+			withToken:      true,
+			expectedCount:  len(expressions),
+		},
+		{
+			name:           "Missing token",
+			expectedStatus: http.StatusUnauthorized,
+			withToken:      false,
+		},
+		{
+			name:           "Invalid token",
+			expectedStatus: http.StatusUnauthorized,
+			withToken:      true,
+			invalidToken:   true,
+		},
+	}
 
-// 				ManagerInstance.StoreExpression(1, expr)
-// 				ManagerInstance.AddTask(1)
-// 			},
-// 			expectedStatusCode: http.StatusOK,
-// 			expectedTask: &TaskResponse{
-// 				Task: TaskResponseArgs{
-// 					ID:            1,
-// 					LeftValue:     5,
-// 					RightValue:    3,
-// 					Operator:      "+",
-// 					OperationTime: 1 * time.Second,
-// 				},
-// 			},
-// 		},
-// 	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// Подготавливаем запрос
+			req := httptest.NewRequest("GET", "/expressions", nil)
 
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			tt.setupQueue()
+			// Добавляем токен, если нужно
+			if tt.withToken {
+				tokenString := token
+				if tt.invalidToken {
+					tokenString = "invalid-token"
+				}
+				req.Header.Set("Authorization", "Bearer "+tokenString)
+			}
 
-// 			req, err := http.NewRequest(http.MethodGet, "/task", nil)
-// 			require.NoError(t, err)
+			// Подготавливаем ResponseRecorder для получения ответа
+			rr := httptest.NewRecorder()
 
-// 			rr := httptest.NewRecorder()
+			// Вызываем тестируемый обработчик
+			orchestrator.HandleGetExpressions(rr, req)
 
-// 			HandleGetTask(rr, req)
+			// Проверяем код ответа
+			if rr.Code != tt.expectedStatus {
+				t.Errorf("Expected status code %d, got %d", tt.expectedStatus, rr.Code)
+			}
 
-// 			assert.Equal(t, tt.expectedStatusCode, rr.Code)
+			// Для успешных запросов проверяем содержимое ответа
+			if tt.expectedStatus == http.StatusOK {
+				var response []orchestrator.ExpressionResponse
+				if err := json.NewDecoder(rr.Body).Decode(&response); err != nil {
+					t.Fatalf("Failed to decode response: %v", err)
+				}
 
-// 			if tt.expectedStatusCode == http.StatusOK {
-// 				assert.Equal(t, "application/json", rr.Header().Get("Content-Type"))
+				if len(response) != tt.expectedCount {
+					t.Errorf("Expected %d expressions, got %d", tt.expectedCount, len(response))
+				}
+			}
+		})
+	}
+}
 
-// 				var task TaskResponse
-// 				err = json.Unmarshal(rr.Body.Bytes(), &task)
-// 				require.NoError(t, err)
-// 				assert.Equal(t, tt.expectedTask.Task.ID, task.Task.ID)
-// 				assert.Equal(t, tt.expectedTask.Task.LeftValue, task.Task.LeftValue)
-// 				assert.Equal(t, tt.expectedTask.Task.RightValue, task.Task.RightValue)
-// 				assert.Equal(t, tt.expectedTask.Task.Operator, task.Task.Operator)
-// 				assert.Equal(t, tt.expectedTask.Task.OperationTime, task.Task.OperationTime)
-// 			}
-// 		})
-// 	}
-// }
+// TestHandleGetExpressionByID проверяет получение выражения по ID
+func TestHandleGetExpressionByID(t *testing.T) {
+	// Инициализируем конфигурацию
+	config.InitConfig("../../.env")
+	// Устанавливаем базу данных в памяти для тестов
 
-// func TestHandlePostTaskResult(t *testing.T) {
-// 	tests := []struct {
-// 		name               string
-// 		setupExpression    func()
-// 		requestBody        string
-// 		expectedStatusCode int
-// 		mockProcessResult  func(result TaskResult) error
-// 	}{
-// 		{
-// 			name: "valid result",
-// 			setupExpression: func() {
-// 				resetManager()
-// 				resetConfig()
-// 				expr := Expression{
-// 					id:         1,
-// 					isRoot:     true,
-// 					status:     "working",
-// 					leftValue:  make(chan float64, 1),
-// 					rightValue: make(chan float64, 1),
-// 				}
-// 				ManagerInstance.StoreExpression(1, expr)
-// 			},
-// 			requestBody:        `{"id":1,"result":42,"error":"nil"}`,
-// 			expectedStatusCode: http.StatusOK,
-// 			mockProcessResult:  nil,
-// 		},
-// 		{
-// 			name: "invalid JSON body",
-// 			setupExpression: func() {
-// 				resetManager()
-// 				resetConfig()
-// 			},
-// 			requestBody:        `{"id":1,"result":42,"error"nil"}`,
-// 			expectedStatusCode: http.StatusUnprocessableEntity,
-// 			mockProcessResult:  nil,
-// 		},
-// 		{
-// 			name: "expression not found",
-// 			setupExpression: func() {
-// 				resetManager()
-// 				resetConfig()
-// 			},
-// 			requestBody:        `{"id":999,"result":42,"error":"nil"}`,
-// 			expectedStatusCode: http.StatusNotFound,
-// 			mockProcessResult: func(result TaskResult) error {
-// 				return ErrExpressionNotFound
-// 			},
-// 		},
-// 		{
-// 			name: "internal server error",
-// 			setupExpression: func() {
-// 				resetManager()
-// 				resetConfig()
-// 			},
-// 			requestBody:        `{"id":1,"result":42,"error":"nil"}`,
-// 			expectedStatusCode: http.StatusNotFound,
-// 			mockProcessResult: func(result TaskResult) error {
-// 				return errors.New("some internal error")
-// 			},
-// 		},
-// 	}
+	// Инициализируем базу данных, передаем путь к директории с schema.sql
+	err := db.InitDB("../../internal/db")
+	if err != nil {
+		t.Fatalf("Failed to initialize database: %v", err)
+	}
 
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			tt.setupExpression()
+	defer db.CleanupDB()
 
-// 			req, err := http.NewRequest(http.MethodPost, "/task/result", bytes.NewBufferString(tt.requestBody))
-// 			require.NoError(t, err)
+	// Создаем тестового пользователя
+	userID, token := createTestUser(t)
 
-// 			rr := httptest.NewRecorder()
+	// Создаем тестовое выражение
+	exprID, err := orchestrator.ProcessExpression("5+5", userID)
+	if err != nil {
+		t.Fatalf("Failed to create test expression: %v", err)
+	}
 
-// 			HandlePostTaskResult(rr, req)
+	// Создаем маршрутизатор Gorilla Mux для тестирования
+	router := mux.NewRouter()
+	router.HandleFunc("/expressions/{id}", orchestrator.HandleGetExpressionByID)
 
-// 			assert.Equal(t, tt.expectedStatusCode, rr.Code)
-// 		})
-// 	}
-// }
+	// Тестовые случаи
+	tests := []struct {
+		name           string
+		id             string
+		expectedStatus int
+		withToken      bool
+		invalidToken   bool
+	}{
+		{
+			name:           "Get valid expression",
+			id:             fmt.Sprintf("%d", *exprID),
+			expectedStatus: http.StatusOK,
+			withToken:      true,
+		},
+		{
+			name:           "Invalid ID format",
+			id:             "invalid",
+			expectedStatus: http.StatusBadRequest,
+			withToken:      true,
+		},
+		{
+			name:           "Expression not found",
+			id:             "999",
+			expectedStatus: http.StatusNotFound,
+			withToken:      true,
+		},
+		{
+			name:           "Missing token",
+			id:             fmt.Sprintf("%d", *exprID),
+			expectedStatus: http.StatusUnauthorized,
+			withToken:      false,
+		},
+		{
+			name:           "Invalid token",
+			id:             fmt.Sprintf("%d", *exprID),
+			expectedStatus: http.StatusUnauthorized,
+			withToken:      true,
+			invalidToken:   true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// Создаем путь для запроса
+			path := fmt.Sprintf("/expressions/%s", tt.id)
+
+			// Подготавливаем запрос
+			req := httptest.NewRequest("GET", path, nil)
+
+			// Добавляем токен, если нужно
+			if tt.withToken {
+				tokenString := token
+				if tt.invalidToken {
+					tokenString = "invalid-token"
+				}
+				req.Header.Set("Authorization", "Bearer "+tokenString)
+			}
+
+			// Прикрепляем переменные маршрута
+			var vars = map[string]string{
+				"id": tt.id,
+			}
+			req = mux.SetURLVars(req, vars)
+
+			// Подготавливаем ResponseRecorder для получения ответа
+			rr := httptest.NewRecorder()
+
+			// Вызываем тестируемый обработчик
+			orchestrator.HandleGetExpressionByID(rr, req)
+
+			// Проверяем код ответа
+			if rr.Code != tt.expectedStatus {
+				t.Errorf("Expected status code %d, got %d", tt.expectedStatus, rr.Code)
+			}
+
+			// Для успешных запросов проверяем содержимое ответа
+			if tt.expectedStatus == http.StatusOK {
+				var response orchestrator.ExpressionResponse
+				if err := json.NewDecoder(rr.Body).Decode(&response); err != nil {
+					t.Fatalf("Failed to decode response: %v", err)
+				}
+
+				idInt, _ := strconv.ParseInt(tt.id, 10, 64)
+				if response.ID != idInt {
+					t.Errorf("Expected expression ID %d, got %d", idInt, response.ID)
+				}
+			}
+		})
+	}
+}
+
+// TestGetUserIDFromToken проверяет извлечение ID пользователя из JWT-токена
+func TestGetUserIDFromToken(t *testing.T) {
+	// Инициализируем конфигурацию
+	config.InitConfig("../../.env")
+	// Устанавливаем базу данных в памяти для тестов
+
+	// Инициализируем базу данных, передаем путь к директории с schema.sql
+	err := db.InitDB("../../internal/db")
+	if err != nil {
+		t.Fatalf("Failed to initialize database: %v", err)
+	}
+
+	defer db.CleanupDB()
+
+	// Создаем тестового пользователя
+	userID, token := createTestUser(t)
+
+	// Тестовые случаи
+	tests := []struct {
+		name        string
+		token       string
+		expectedID  int64
+		expectedErr bool
+	}{
+		{
+			name:       "Valid token",
+			token:      token,
+			expectedID: userID,
+		},
+		{
+			name:        "Invalid token",
+			token:       "invalid-token",
+			expectedErr: true,
+		},
+		{
+			name:        "Empty token",
+			token:       "",
+			expectedErr: true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// Создаем HTTP запрос с токеном
+			req := httptest.NewRequest("GET", "/", nil)
+			if tt.token != "" {
+				req.Header.Set("Authorization", "Bearer "+tt.token)
+			}
+
+			// Извлекаем ID пользователя из токена
+			id, err := orchestrator.GetUserIDFromToken(req)
+
+			// Проверяем ошибку
+			if (err != nil) != tt.expectedErr {
+				t.Errorf("Expected error: %v, got error: %v", tt.expectedErr, err != nil)
+			}
+
+			// Проверяем ID пользователя
+			if !tt.expectedErr && id != tt.expectedID {
+				t.Errorf("Expected user ID %d, got %d", tt.expectedID, id)
+			}
+		})
+	}
+}
