@@ -1,12 +1,12 @@
 package orchestrator
 
 import (
+	"database/sql"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
 	"parallel-calculator/internal/auth"
-	"parallel-calculator/internal/db"
 	"parallel-calculator/internal/logger"
 	"strconv"
 
@@ -104,7 +104,8 @@ func HandleGetExpressions(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Получаем выражения пользователя из базы данных
-	expressions, err := db.GetUserExpressions(userID)
+	// Используем функцию-прокси вместо прямого доступа к БД
+	expressions, err := GetExpressionsByUserID(userID)
 	if err != nil {
 		logger.LogERROR(fmt.Sprintf("Failed to get expressions: %v", err))
 		http.Error(w, "Внутренняя ошибка сервера", http.StatusInternalServerError)
@@ -135,6 +136,14 @@ func HandleGetExpressions(w http.ResponseWriter, r *http.Request) {
 func HandleGetExpressionByID(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
+	// Получаем ID пользователя из JWT-токена
+	userID, err := GetUserIDFromToken(r)
+	if err != nil {
+		logger.LogERROR(fmt.Sprintf("Authentication error: %v", err))
+		http.Error(w, "Ошибка аутентификации", http.StatusUnauthorized)
+		return
+	}
+
 	vars := mux.Vars(r)
 	idStr := vars["id"] // получаем параметр id из URL
 
@@ -146,17 +155,25 @@ func HandleGetExpressionByID(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	logger.LogINFO(fmt.Sprintf("Processing get expression by id request: %v", id))
+	logger.LogINFO(fmt.Sprintf("Processing get expression by id request: %v for user: %v", id, userID))
 
-	expression, err := db.GetExpressionByID(int64(id))
+	// Получаем выражение по ID через функцию-прокси
+	expression, err := GetExpressionByID(int64(id))
 	if err != nil {
-		if errors.Is(err, ErrExpressionNotFound) {
+		if errors.Is(err, ErrExpressionNotFound) || errors.Is(err, sql.ErrNoRows) {
 			logger.LogERROR(fmt.Sprintf("Expression not found: %v", id))
 			http.Error(w, "Выражение не найдено", http.StatusNotFound)
 			return
 		}
 		logger.LogERROR(fmt.Sprintf("Failed to get expression by id: %v", err))
 		http.Error(w, "Внутренняя ошибка сервера", http.StatusInternalServerError)
+		return
+	}
+
+	// Проверяем, что выражение принадлежит этому пользователю
+	if expression.UserID != userID {
+		logger.LogERROR(fmt.Sprintf("Unauthorized access to expression: %v by user: %v", id, userID))
+		http.Error(w, "Нет доступа к этому выражению", http.StatusForbidden)
 		return
 	}
 

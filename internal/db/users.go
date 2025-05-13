@@ -49,7 +49,6 @@ func CreateUser(login, password string) (*User, error) {
 		return nil, err
 	}
 
-	// Возвращаем созданного пользователя
 	return &User{
 		ID:           id,
 		Login:        login,
@@ -77,26 +76,9 @@ func GetUserByID(id int64) (*User, error) {
 		return nil, err
 	}
 
-	// Пробуем различные форматы даты для парсинга
-	formats := []string{
-		"2006-01-02 15:04:05",
-		"2006-01-02T15:04:05Z",
-		"2006-01-02T15:04:05.999999999Z07:00", // RFC3339
-		"2006-01-02T15:04:05",
-		time.RFC3339,
-	}
-
-	var parseErr error
-	for _, format := range formats {
-		user.CreatedAt, parseErr = time.Parse(format, createdAtStr)
-		if parseErr == nil {
-			break // Успешно разобрали дату
-		}
-	}
-
-	// Если не удалось разобрать дату, устанавливаем текущее время
-	if parseErr != nil {
-		user.CreatedAt = time.Now()
+	user.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
+	if err != nil {
+		return nil, err
 	}
 
 	return &user, nil
@@ -121,26 +103,9 @@ func GetUserByLogin(login string) (*User, error) {
 		return nil, err
 	}
 
-	// Пробуем различные форматы даты для парсинга
-	formats := []string{
-		"2006-01-02 15:04:05",
-		"2006-01-02T15:04:05Z",
-		"2006-01-02T15:04:05.999999999Z07:00", // RFC3339
-		"2006-01-02T15:04:05",
-		time.RFC3339,
-	}
-
-	var parseErr error
-	for _, format := range formats {
-		user.CreatedAt, parseErr = time.Parse(format, createdAtStr)
-		if parseErr == nil {
-			break // Успешно разобрали дату
-		}
-	}
-
-	// Если не удалось разобрать дату, устанавливаем текущее время
-	if parseErr != nil {
-		user.CreatedAt = time.Now()
+	user.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
+	if err != nil {
+		return nil, err
 	}
 
 	return &user, nil

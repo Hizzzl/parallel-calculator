@@ -12,15 +12,9 @@ var (
 
 // CreateOperation создает новую операцию в базе данных
 func CreateOperation(expressionID int64, parentOpID *int64, operator string,
-	leftValue, rightValue *float64, isRoot bool, childPosition *string) (*Operation, error) {
+	leftValue, rightValue *float64, isRoot bool, childPosition *string, status string) (*Operation, error) {
 	DbMutex.Lock()
 	defer DbMutex.Unlock()
-
-	// Если оба значения аргументов предоставлены, операция готова к обработке
-	initialStatus := StatusPending
-	if leftValue != nil && rightValue != nil {
-		initialStatus = StatusReady
-	}
 
 	query := `
 		INSERT INTO operations 
@@ -29,11 +23,10 @@ func CreateOperation(expressionID int64, parentOpID *int64, operator string,
 		VALUES (?, ?, ?, ?, ?, ?, ?, ?)
 	`
 
-	// Выполняем запрос с обработкой нулевых параметров
 	res, err := DB.Exec(
 		query,
 		expressionID, parentOpID, childPosition, leftValue, rightValue,
-		operator, initialStatus, isRoot,
+		operator, status, isRoot,
 	)
 	if err != nil {
 		return nil, err
@@ -53,7 +46,7 @@ func CreateOperation(expressionID int64, parentOpID *int64, operator string,
 		LeftValue:        leftValue,
 		RightValue:       rightValue,
 		Operator:         operator,
-		Status:           initialStatus,
+		Status:           status,
 		IsRootExpression: isRoot,
 		CreatedAt:        time.Now(),
 		UpdatedAt:        time.Now(),
@@ -115,26 +108,17 @@ func GetOperationByID(id int64) (*Operation, error) {
 		op.Result = &val
 	}
 
-	// Значение уже имеет тип bool, просто присваиваем
 	op.IsRootExpression = isRoot
 
-	// Парсим временные метки используя формат RFC3339
+	// Парсим временные метки в формате RFC3339
 	op.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 	if err != nil {
-		// Если стандартный формат не подошел, пробуем формат SQL
-		op.CreatedAt, err = time.Parse("2006-01-02 15:04:05", createdAtStr)
-		if err != nil {
-			return nil, err
-		}
+		return nil, err
 	}
 
 	op.UpdatedAt, err = time.Parse(time.RFC3339, updatedAtStr)
 	if err != nil {
-		// Если стандартный формат не подошел, пробуем формат SQL
-		op.UpdatedAt, err = time.Parse("2006-01-02 15:04:05", updatedAtStr)
-		if err != nil {
-			return nil, err
-		}
+		return nil, err
 	}
 
 	return &op, nil
@@ -202,24 +186,15 @@ func GetOperationsByExpressionID(expressionID int64) ([]*Operation, error) {
 		// Значение уже имеет тип bool, просто присваиваем
 		op.IsRootExpression = isRoot
 
-		// Parse timestamps
-		// Сначала пробуем формат RFC3339 (ISO 8601)
+		// Парсим временные метки в формате RFC3339
 		op.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 		if err != nil {
-			// Если не получилось, пробуем другой формат
-			op.CreatedAt, err = time.Parse("2006-01-02 15:04:05", createdAtStr)
-			if err != nil {
-				return nil, err
-			}
+			return nil, err
 		}
 
-		// Аналогично для UpdatedAt
 		op.UpdatedAt, err = time.Parse(time.RFC3339, updatedAtStr)
 		if err != nil {
-			op.UpdatedAt, err = time.Parse("2006-01-02 15:04:05", updatedAtStr)
-			if err != nil {
-				return nil, err
-			}
+			return nil, err
 		}
 
 		operations = append(operations, &op)
@@ -237,77 +212,73 @@ func UpdateOperationStatus(id int64, status string) error {
 	DbMutex.Lock()
 	defer DbMutex.Unlock()
 	_, err := DB.Exec(
-		"UPDATE operations SET status = ?, updated_at = datetime('now') WHERE id = ?",
+		"UPDATE operations SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
 		status, id,
 	)
-
-	// Если это корневая операция и её статус 'завершена',
-	// обновляем соответствующее выражение
-	if status == StatusCompleted {
-		var isRoot bool
-		var expressionID int64
-		var result float64
-
-		err := DB.QueryRow(
-			"SELECT is_root_expression, expression_id, result FROM operations WHERE id = ?",
-			id,
-		).Scan(&isRoot, &expressionID, &result)
-		if err != nil {
-			return err
-		}
-
-		if isRoot {
-			DbMutex.Unlock()
-			err = SetExpressionResult(expressionID, result)
-			DbMutex.Lock()
-			if err != nil {
-				return err
-			}
-		}
-	}
-
 	return err
 }
 
-// SetOperationResult устанавливает результат операции
+// SetOperationResult устанавливает только результат операции, не изменяя статус
 func SetOperationResult(id int64, result float64) error {
 	DbMutex.Lock()
 	defer DbMutex.Unlock()
+
+	// Обновляем только значение результата
 	_, err := DB.Exec(
-		`UPDATE operations 
-		SET result = ?, status = ?, updated_at = CURRENT_TIMESTAMP 
-		WHERE id = ?`,
-		result, StatusCompleted, id,
+		"UPDATE operations SET result = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+		result, id,
 	)
+	return err
+}
 
-	if err != nil {
-		return err
-	}
+// OperationInfo содержит основную информацию об операции
+type OperationInfo struct {
+	ID               int64
+	ExpressionID     int64
+	IsRootExpression bool
+	Status           string
+}
 
-	// Проверяем, является ли это корневой операцией
-	var isRoot bool
-	var expressionID int64
+// SetOperationError устанавливает ошибку для операции и обновляет её статус
+func SetOperationError(operationID int64, errorMsg string) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
 
-	err = DB.QueryRow(
-		"SELECT is_root_expression, expression_id FROM operations WHERE id = ?",
+	_, err := DB.Exec(
+		"UPDATE operations SET status = ?, error_message = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
+		StatusError, errorMsg, operationID,
+	)
+	return err
+}
+
+// GetOperationInfo получает основную информацию об операции
+func GetOperationInfo(id int64) (*OperationInfo, error) {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
+
+	var info OperationInfo
+	err := DB.QueryRow(
+		"SELECT id, expression_id, is_root_expression, status FROM operations WHERE id = ?",
 		id,
-	).Scan(&isRoot, &expressionID)
+	).Scan(&info.ID, &info.ExpressionID, &info.IsRootExpression, &info.Status)
 
 	if err != nil {
-		return err
+		return nil, err
 	}
 
-	// Если это корневая операция, обновляем результат выражения
-	if isRoot {
-		DbMutex.Unlock()
-		err = SetExpressionResult(expressionID, result)
-		DbMutex.Lock()
-		if err != nil {
-			return err
-		}
-	}
+	return &info, nil
+}
 
-	return nil
+// CancelOperationsByExpressionID отменяет все операции по expressionID
+func CancelOperationsByExpressionID(expressionID int64) error {
+	DbMutex.Lock()
+	defer DbMutex.Unlock()
+
+	_, err := DB.Exec(
+		"UPDATE operations SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE expression_id = ?",
+		StatusCanceled, expressionID,
+	)
+	return err
 }
 
 // GetReadyOperation получает одну операцию, которая готова к обработке
@@ -367,201 +338,21 @@ func GetReadyOperation() (*Operation, error) {
 		op.Result = &val
 	}
 
-	// Значение уже имеет тип bool, просто присваиваем
 	op.IsRootExpression = isRoot
 
 	// Parse timestamps
-	// Сначала пробуем формат RFC3339 (ISO 8601)
 	op.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 	if err != nil {
-		// Если первый формат не подошел, пробуем другой
-		op.CreatedAt, err = time.Parse("2006-01-02 15:04:05", createdAtStr)
-		if err != nil {
-			return nil, err
-		}
+		return nil, err
 	}
 
 	// Аналогично для UpdatedAt
 	op.UpdatedAt, err = time.Parse(time.RFC3339, updatedAtStr)
 	if err != nil {
-		op.UpdatedAt, err = time.Parse("2006-01-02 15:04:05", updatedAtStr)
-		if err != nil {
-			return nil, err
-		}
+		return nil, err
 	}
 
 	return &op, nil
-}
-
-// CheckDependencies проверяет, завершены ли все зависимости операции
-// и обновляет её статус на 'готова', если они завершены
-func CheckDependencies(id int64) error {
-	// Получаем операцию
-	op, err := GetOperationByID(id)
-	DbMutex.Lock()
-	defer DbMutex.Unlock()
-	if err != nil {
-		return err
-	}
-
-	// Если уже готова или обрабатывается, проверять не нужно
-	if op.Status == StatusReady || op.Status == StatusProcessing {
-		return nil
-	}
-
-	// Находим все дочерние операции для данной операции
-	rows, err := DB.Query(
-		`SELECT id, status FROM operations 
-		 WHERE parent_operation_id = ?`,
-		op.ID,
-	)
-	if err != nil {
-		return err
-	}
-	defer rows.Close()
-
-	isReady := true
-	hasChildren := false
-
-	// Проверяем статус всех дочерних операций
-	for rows.Next() {
-		hasChildren = true
-		var childID int64
-		var status string
-
-		if err := rows.Scan(&childID, &status); err != nil {
-			return err
-		}
-
-		if status != StatusCompleted {
-			isReady = false
-			break
-		}
-	}
-
-	if err = rows.Err(); err != nil {
-		return err
-	}
-
-	// Если все дочерние операции завершены или их нет, обновляем статус на 'готова'
-	if isReady && hasChildren {
-		DbMutex.Unlock()
-		err := UpdateOperationStatus(id, StatusReady)
-		DbMutex.Lock()
-		return err
-	}
-
-	return nil
-}
-
-// HandleOperationError обрабатывает ошибку операции и отменяет все связанные операции
-func HandleOperationError(operationID int64, errorMsg string) error {
-	// Блокируем мьютекс один раз на всю функцию
-	DbMutex.Lock()
-	defer DbMutex.Unlock()
-
-	// Получаем операцию напрямую из БД без использования GetOperationByID
-	var op Operation
-	var createdAtStr, updatedAtStr string
-	var parentOpID sql.NullInt64
-	var childPosition sql.NullString
-	var leftValue, rightValue, result sql.NullFloat64
-	var isRoot bool
-
-	err := DB.QueryRow(
-		`SELECT id, expression_id, parent_operation_id, child_position, left_value, right_value,
-		operator, status, result, is_root_expression, created_at, updated_at
-		FROM operations 
-		WHERE id = ?`,
-		operationID,
-	).Scan(
-		&op.ID, &op.ExpressionID, &parentOpID, &childPosition, &leftValue, &rightValue,
-		&op.Operator, &op.Status, &result, &isRoot, &createdAtStr, &updatedAtStr,
-	)
-
-	if err != nil {
-		if err == sql.ErrNoRows {
-			return ErrOperationNotFound
-		}
-		return err
-	}
-
-	// Обрабатываем не null поля
-	if parentOpID.Valid {
-		val := parentOpID.Int64
-		op.ParentOpID = &val
-	}
-
-	if leftValue.Valid {
-		val := leftValue.Float64
-		op.LeftValue = &val
-	}
-
-	if rightValue.Valid {
-		val := rightValue.Float64
-		op.RightValue = &val
-	}
-
-	if childPosition.Valid {
-		val := childPosition.String
-		op.ChildPosition = &val
-	}
-
-	if result.Valid {
-		val := result.Float64
-		op.Result = &val
-	}
-
-	op.IsRootExpression = isRoot
-
-	// Начинаем транзакцию
-	tx, err := DB.Begin()
-	if err != nil {
-		return err
-	}
-	defer func() {
-		if err != nil {
-			tx.Rollback()
-		} else {
-			tx.Commit()
-		}
-	}()
-
-	// 1. Устанавливаем ошибку для выражения
-	_, err = tx.Exec(
-		`UPDATE expressions 
-		 SET error_message = ?, status = ?, updated_at = CURRENT_TIMESTAMP 
-		 WHERE id = ?`,
-		errorMsg, StatusError, op.ExpressionID,
-	)
-	if err != nil {
-		return err
-	}
-
-	// 2. Отмечаем все операции выражения как отмененные или ошибочные
-	// Операция, вызвавшая ошибку, получает статус "error"
-	_, err = tx.Exec(
-		`UPDATE operations
-		 SET status = ?, error_message = ?, updated_at = CURRENT_TIMESTAMP
-		 WHERE id = ?`,
-		StatusError, errorMsg, operationID,
-	)
-	if err != nil {
-		return err
-	}
-
-	// Все остальные операции получают статус "canceled"
-	_, err = tx.Exec(
-		`UPDATE operations
-		 SET status = ?, updated_at = CURRENT_TIMESTAMP
-		 WHERE expression_id = ? AND id != ?`,
-		StatusCanceled, op.ExpressionID, operationID,
-	)
-	if err != nil {
-		return err
-	}
-
-	return nil
 }
 
 // UpdateOperation обновляет операцию в базе данных

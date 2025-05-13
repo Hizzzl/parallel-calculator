@@ -3,7 +3,6 @@ package db
 import (
 	"database/sql"
 	"errors"
-	"fmt"
 	"time"
 )
 
@@ -75,20 +74,12 @@ func GetExpressionByID(id int64) (*Expression, error) {
 	// Сначала пробуем парсить время в формате RFC3339
 	expr.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 	if err != nil {
-		// Если не получилось, пробуем в формате SQL
-		expr.CreatedAt, err = time.Parse("2006-01-02 15:04:05", createdAtStr)
-		if err != nil {
-			return nil, fmt.Errorf("failed to parse created_at time '%s': %v", createdAtStr, err)
-		}
+		return nil, err
 	}
 
 	expr.UpdatedAt, err = time.Parse(time.RFC3339, updatedAtStr)
 	if err != nil {
-		// Если не получилось, пробуем в формате SQL
-		expr.UpdatedAt, err = time.Parse("2006-01-02 15:04:05", updatedAtStr)
-		if err != nil {
-			return nil, fmt.Errorf("failed to parse updated_at time '%s': %v", updatedAtStr, err)
-		}
+		return nil, err
 	}
 
 	return &expr, nil
@@ -177,21 +168,13 @@ func GetUserExpressions(userID int64) ([]*Expression, error) {
 		// Сначала пробуем парсить время в формате RFC3339
 		expr.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 		if err != nil {
-			// Если не получилось, пробуем в формате SQL
-			expr.CreatedAt, err = time.Parse("2006-01-02 15:04:05", createdAtStr)
-			if err != nil {
-				return nil, fmt.Errorf("failed to parse created_at time '%s': %v", createdAtStr, err)
-			}
+			return nil, err
 		}
 
 		// Аналогично для UpdatedAt
 		expr.UpdatedAt, err = time.Parse(time.RFC3339, updatedAtStr)
 		if err != nil {
-			// Если не получилось, пробуем в формате SQL
-			expr.UpdatedAt, err = time.Parse("2006-01-02 15:04:05", updatedAtStr)
-			if err != nil {
-				return nil, fmt.Errorf("failed to parse updated_at time '%s': %v", updatedAtStr, err)
-			}
+			return nil, err
 		}
 
 		expressions = append(expressions, &expr)
