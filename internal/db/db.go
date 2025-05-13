@@ -45,7 +45,7 @@ func InitDB(packagePath string) error {
 		return fmt.Errorf("failed to ping database: %w", err)
 	}
 
-	if err = applySchema(filepath.Join(packagePath, "schema.sql")); err != nil {
+	if err = ApplySchema(filepath.Join(packagePath, "schema.sql")); err != nil {
 		return fmt.Errorf("failed to apply schema: %w", err)
 	}
 
@@ -85,7 +85,7 @@ func CleanupDB() error {
 }
 
 // applySchema выполняет SQL из файла schema.sql
-func applySchema(schemaPath string) error {
+func ApplySchema(schemaPath string) error {
 
 	schemaBytes, err := os.ReadFile(schemaPath)
 	if err != nil {

@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"os"
-	"os/signal"
 	"parallel-calculator/internal/auth"
 	"parallel-calculator/internal/config"
 	"parallel-calculator/internal/db"
@@ -12,7 +10,6 @@ import (
 	"parallel-calculator/internal/logger"
 	"parallel-calculator/internal/orchestrator"
 	"strconv"
-	"syscall"
 
 	"github.com/gorilla/mux"
 )
@@ -68,11 +65,9 @@ func main() {
 	}
 	logger.INFO.Println("gRPC сервер запущен на порту " + grpcPort)
 
-	// Ожидаем сигнал для остановки
-	sigCh := make(chan os.Signal, 1)
-	signal.Notify(sigCh, os.Interrupt, syscall.SIGTERM)
-	<-sigCh
+	// Серверы запущены и работают в фоновом режиме
+	logger.INFO.Println("Оркестратор запущен и работает")
 
-	logger.INFO.Println("Получен сигнал остановки, завершаем работу серверов...")
-	logger.INFO.Println("Оркестратор остановлен")
+	// Бесконечный цикл, чтобы программа не завершалась
+	select {}
 }

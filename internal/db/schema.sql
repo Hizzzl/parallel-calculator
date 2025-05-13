@@ -39,7 +39,3 @@ CREATE TABLE IF NOT EXISTS operations (
     CHECK (status IN ('pending', 'ready', 'processing', 'completed', 'error', 'canceled')),
     CHECK (child_position IN ('left', 'right', NULL))
 );
-
--- Вставляем тестового пользователя, если таблица пуста
-INSERT OR IGNORE INTO users (login, password_hash) 
-VALUES ('test_user', '$2a$10$KrZ.f3n7AxVgAvUaK7DMW.Dt8e8IZOxvNrd9PQAYYZRw0bHdU4bUO'); -- пароль: password

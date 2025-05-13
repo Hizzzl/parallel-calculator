@@ -41,15 +41,14 @@ func Worker(tasks_chan chan Task, worker_id int) {
 			Result: result,
 			Error:  Error,
 		}
-		
-				if globalClient == nil {
+
+		if globalClient == nil {
 			logger.ERROR.Printf("Worker %d: глобальный клиент не установлен", worker_id)
 			return
 		}
-		
-		// gRPC клиенты потокобезопасны по умолчанию
+
 		err := globalClient.SendTaskResult(taskResult)
-		
+
 		if err != nil {
 			logger.ERROR.Printf("Worker %d: ошибка отправки результата: %v", worker_id, err)
 			return

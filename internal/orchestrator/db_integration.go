@@ -137,7 +137,15 @@ func GetExpressionsByUserID(userID int64) ([]*db.Expression, error) {
 
 // GetExpressionByID получает выражение по ID
 func GetExpressionByID(id int64) (*db.Expression, error) {
-	return db.GetExpressionByID(id)
+	expr, err := db.GetExpressionByID(id)
+	if err != nil {
+		// Преобразуем ошибку db.ErrExpressionNotFound в orchestrator.ErrExpressionNotFound
+		if err == db.ErrExpressionNotFound {
+			return nil, ErrExpressionNotFound
+		}
+		return nil, err
+	}
+	return expr, nil
 }
 
 // UpdateParentOperation обновляет аргументы родительской операции

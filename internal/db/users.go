@@ -8,7 +8,6 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// Ошибки
 var (
 	ErrUserNotFound       = errors.New("user not found")
 	ErrUserAlreadyExists  = errors.New("user already exists")
@@ -113,13 +112,11 @@ func GetUserByLogin(login string) (*User, error) {
 
 // AuthenticateUser проверяет, действительны ли предоставленные учетные данные
 func AuthenticateUser(login, password string) (*User, error) {
-	// Здесь мьютекс не нужен, т.к. мы вызываем GetUserByLogin, где уже есть мьютекс
 	user, err := GetUserByLogin(login)
 	if err != nil {
 		return nil, err
 	}
 
-	// Сравниваем хешированный пароль с предоставленным паролем
 	err = bcrypt.CompareHashAndPassword([]byte(user.PasswordHash), []byte(password))
 	if err != nil {
 		return nil, ErrInvalidCredentials

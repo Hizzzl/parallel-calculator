@@ -39,13 +39,11 @@ func ProcessExpression(expr string, userID int64) (*int64, error) {
 	if err != nil {
 		return nil, err
 	}
-	// Парсим AST из выражения
 	astNode, err := CreateAST(expression.Expression)
 
 	if err != nil {
 		// Если произошла ошибка при парсинге, устанавливаем статус ошибки в БД
 		db.SetExpressionError(expression.ID, "Invalid expression syntax: "+err.Error())
-		// Возвращаем ошибку недействительного выражения
 		return nil, ErrInvalidExpression
 	}
 
@@ -62,14 +60,11 @@ func ProcessExpression(expr string, userID int64) (*int64, error) {
 
 // ProcessExpressionResult обрабатывает результат выполнения задачи
 func ProcessExpressionResult(result TaskResult) error {
-	// Получаем операцию, чтобы иметь доступ к ID выражения и другим данным
 	op, err := db.GetOperationByID(result.ID)
 	if err != nil {
 		return fmt.Errorf("не удалось получить операцию: %w", err)
 	}
 
-	// Теперь ID из TaskResult напрямую является ID в базе данных
-	// Проверяем наличие ошибки в результате
 	if result.Error != "nil" && result.Error != "" {
 		// Обрабатываем ошибку операции и отменяем все связанные операции
 		err := HandleOperationErrorWithCancellation(result.ID, result.Error)
@@ -108,6 +103,5 @@ func ProcessExpressionResult(result TaskResult) error {
 		}
 	}
 
-	// 5. Проверяем зависимости всех операций после обновления результата
 	return nil
 }

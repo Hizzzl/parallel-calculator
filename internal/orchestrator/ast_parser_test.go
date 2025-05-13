@@ -1,189 +1,193 @@
 package orchestrator_test
 
-// import (
-// 	"go/ast"
-// 	"parallel-calculator/internal/orchestrator"
-// 	"testing"
-// )
+import (
+	"go/ast"
+	"go/parser"
+	"parallel-calculator/internal/db"
+	"parallel-calculator/internal/orchestrator"
+	"testing"
+)
 
-// // TestCreateAST проверяет корректность создания AST из выражения
-// func TestCreateAST(t *testing.T) {
-// 	tests := []struct {
-// 		name       string
-// 		expression string
-// 		wantErr    bool
-// 	}{
-// 		{
-// 			name:       "Simple addition",
-// 			expression: "2+2",
-// 			wantErr:    false,
-// 		},
-// 		{
-// 			name:       "Subtraction",
-// 			expression: "5-3",
-// 			wantErr:    false,
-// 		},
-// 		{
-// 			name:       "Multiplication",
-// 			expression: "4*2",
-// 			wantErr:    false,
-// 		},
-// 		{
-// 			name:       "Division",
-// 			expression: "8/4",
-// 			wantErr:    false,
-// 		},
-// 		{
-// 			name:       "Complex expression",
-// 			expression: "2*(3+4)",
-// 			wantErr:    false,
-// 		},
-// 		{
-// 			name:       "Expression with parentheses",
-// 			expression: "(1+2)*(3+4)",
-// 			wantErr:    false,
-// 		},
-// 		{
-// 			name:       "Expression with negative number",
-// 			expression: "-5+3",
-// 			wantErr:    false,
-// 		},
-// 		{
-// 			name:       "Invalid expression - incomplete",
-// 			expression: "2+",
-// 			wantErr:    true,
-// 		},
-// 		{
-// 			name:       "Invalid expression - mismatched parentheses",
-// 			expression: "2*(3+4",
-// 			wantErr:    true,
-// 		},
-// 		{
-// 			name:       "Invalid expression - empty",
-// 			expression: "",
-// 			wantErr:    true,
-// 		},
-// 		{
-// 			name:       "Invalid expression - invalid characters",
-// 			expression: "2+a",
-// 			wantErr:    true,
-// 		},
-// 	}
+// prepareASTNode подготавливает AST узел для тестирования
+func prepareASTNode(t *testing.T, expr string) ast.Node {
+	// Создаем файловый набор для парсинга
+	node, err := parser.ParseExpr(expr)
+	if err != nil {
+		t.Fatalf("Failed to parse expression '%s': %v", expr, err)
+	}
+	return node
+}
 
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			got, err := orchestrator.CreateAST(tt.expression)
+// TestParseAST_SimpleNumber проверяет обработку простого числа
+func TestParseAST_SimpleNumber(t *testing.T) {
+	// Инициализируем БД
+	initTestDB(t)
 
-// 			// Проверяем наличие ошибки
-// 			if (err != nil) != tt.wantErr {
-// 				t.Errorf("CreateAST() error = %v, wantErr %v", err, tt.wantErr)
-// 				return
-// 			}
+	// Создаем тестового пользователя
+	user, err := db.CreateUser("testuser_simple", "testpass")
+	if err != nil {
+		t.Fatalf("Failed to create test user: %v", err)
+	}
 
-// 			// Если не ожидаем ошибки, проверяем результат
-// 			if !tt.wantErr {
-// 				if got == nil {
-// 					t.Errorf("CreateAST() returned nil AST for valid expression")
-// 				}
+	// Создаем тестовое выражение
+	expr, err := db.CreateExpression(user.ID, "42")
+	if err != nil {
+		t.Fatalf("Failed to create test expression: %v", err)
+	}
 
-// 				// Проверяем, что AST является валидной структурой
-// 				switch n := got.(type) {
-// 				case *ast.BinaryExpr, *ast.ParenExpr, *ast.BasicLit, *ast.UnaryExpr:
-// 					// Это валидные типы узлов AST для математических выражений
-// 				default:
-// 					t.Errorf("CreateAST() returned unexpected AST node type: %T", n)
-// 				}
-// 			}
-// 		})
-// 	}
-// }
+	// Создаем AST узел для простого числа
+	node := prepareASTNode(t, "42")
 
-// // TestIsLiteral проверяет функцию определения литерала
-// // func TestIsLiteral(t *testing.T) {
-// // 	// Здесь мы создадим некоторые AST узлы вручную и проверим функцию isLiteral
-// // 	tests := []struct {
-// // 		name        string
-// // 		expression  string      // Выражение для создания AST
-// // 		isLiteral   bool        // Ожидаемый результат - является ли выражение литералом
-// // 		literalValue *float64   // Ожидаемое значение литерала (если применимо)
-// // 	}{
-// // 		{
-// // 			name:        "Simple number",
-// // 			expression:  "2",
-// // 			isLiteral:   true,
-// // 			literalValue: floatPtr(2),
-// // 		},
-// // 		{
-// // 			name:        "Expression is not a literal",
-// // 			expression:  "2+2",
-// // 			isLiteral:   false,
-// // 			literalValue: nil,
-// // 		},
-// // 		{
-// // 			name:        "Parenthesized number",
-// // 			expression:  "(5)",
-// // 			isLiteral:   true,
-// // 			literalValue: floatPtr(5),
-// // 		},
-// // 		{
-// // 			name:        "Nested parenthesized number",
-// // 			expression:  "((7))",
-// // 			isLiteral:   true,
-// // 			literalValue: floatPtr(7),
-// // 		},
-// // 		{
-// // 			name:        "Negative number",
-// // 			expression:  "-3",
-// // 			isLiteral:   false, // Унарные операции не считаются литералами в текущей реализации
-// // 			literalValue: nil,
-// // 		},
-// // 	}
+	// Парсим AST и создаем операции в базе данных
+	err = orchestrator.ParseAST(expr.ID, node)
+	if err != nil {
+		t.Errorf("ParseAST() error = %v", err)
+		return
+	}
 
-// // 	for _, tt := range tests {
-// // 		t.Run(tt.name, func(t *testing.T) {
-// // 			// Создаем AST из выражения
-// // 			astNode, err := orchestrator.CreateAST(tt.expression)
-// // 			if err != nil {
-// // 				// Пропускаем тест, если не можем создать AST
-// // 				t.Skipf("Failed to create AST for %s: %v", tt.expression, err)
-// // 				return
-// // 			}
+	// Получаем выражение из базы данных и проверяем его статус и результат
+	updatedExpr, err := db.GetExpressionByID(expr.ID)
+	if err != nil {
+		t.Errorf("GetExpressionByID() error = %v", err)
+		return
+	}
 
-// // 			// Пытаемся получить доступ к приватной функции isLiteral через рефлексию
-// // 			// Примечание: для этого функция isLiteral должна быть экспортирована или
-// // 			// нужно создать тестируемый wrapper в пакете orchestrator
-// // 			// Предположим, что есть публичная функция IsLiteralForTesting
-// // 			value, isLiteral := orchestrator.IsLiteralForTesting(astNode)
+	// Проверяем, что статус и результат установлены правильно
+	if updatedExpr.Status != orchestrator.StatusCompleted {
+		t.Errorf("Expression status = %v, want %v", updatedExpr.Status, orchestrator.StatusCompleted)
+	}
 
-// // 			// Проверяем результат
-// // 			if isLiteral != tt.isLiteral {
-// // 				t.Errorf("isLiteral() = %v, want %v", isLiteral, tt.isLiteral)
-// // 			}
+	if updatedExpr.Result == nil {
+		t.Errorf("Expression result is nil, expected 42.0")
+		return
+	}
 
-// // 			// Если ожидаем, что это литерал, проверяем значение
-// // 			if tt.isLiteral && isLiteral {
-// // 				if (value == nil) != (tt.literalValue == nil) {
-// // 					t.Errorf("isLiteral() value is %v, want %v", value, tt.literalValue)
-// // 				} else if value != nil && tt.literalValue != nil && *value != *tt.literalValue {
-// // 					t.Errorf("isLiteral() value = %f, want %f", *value, *tt.literalValue)
-// // 				}
-// // 			}
-// // 		})
-// // 	}
-// // }
+	if *updatedExpr.Result != 42.0 {
+		t.Errorf("Expression result = %v, want %v", *updatedExpr.Result, 42.0)
+	}
+}
 
-// // Helper функция для создания указателя на float64
-// func floatPtr(v float64) *float64 {
-// 	return &v
-// }
+// TestParseAST_NumberInParentheses проверяет обработку числа в скобках
+func TestParseAST_NumberInParentheses(t *testing.T) {
+	// Инициализируем БД
+	initTestDB(t)
+	// defer cleanupTestDB()
 
-// // Примечание: для корректной работы этого теста,
-// // необходимо экспортировать функцию isLiteral в пакете orchestrator,
-// // создав публичную версию для тестирования:
+	// Создаем тестового пользователя
+	user, err := db.CreateUser("testuser_parens", "testpass")
+	if err != nil {
+		t.Fatalf("Failed to create test user: %v", err)
+	}
 
-// /*
-// // IsLiteralForTesting публичная версия приватной функции isLiteral для тестирования
-// func IsLiteralForTesting(node ast.Node) (*float64, bool) {
-//     return isLiteral(node)
-// }
-// */
+	// Создаем тестовое выражение
+	expr, err := db.CreateExpression(user.ID, "(42)")
+	if err != nil {
+		t.Fatalf("Failed to create test expression: %v", err)
+	}
+
+	// Создаем AST узел для числа в скобках
+	node := prepareASTNode(t, "(42)")
+
+	// Парсим AST и создаем операции в базе данных
+	err = orchestrator.ParseAST(expr.ID, node)
+	if err != nil {
+		t.Errorf("ParseAST() error = %v", err)
+		return
+	}
+
+	// Получаем выражение из базы данных и проверяем его статус и результат
+	updatedExpr, err := db.GetExpressionByID(expr.ID)
+	if err != nil {
+		t.Errorf("GetExpressionByID() error = %v", err)
+		return
+	}
+
+	// Проверяем, что статус и результат установлены правильно
+	if updatedExpr.Status != orchestrator.StatusCompleted {
+		t.Errorf("Expression status = %v, want %v", updatedExpr.Status, orchestrator.StatusCompleted)
+	}
+
+	if updatedExpr.Result == nil {
+		t.Errorf("Expression result is nil, expected 42.0")
+		return
+	}
+
+	if *updatedExpr.Result != 42.0 {
+		t.Errorf("Expression result = %v, want %v", *updatedExpr.Result, 42.0)
+	}
+}
+
+// TestParseAST_ComplexExpression проверяет обработку сложного выражения со скобками
+func TestParseAST_ComplexExpression(t *testing.T) {
+	// Инициализируем БД
+	initTestDB(t)
+	// defer cleanupTestDB()
+
+	// Создаем тестового пользователя
+	user, err := db.CreateUser("testuser_complex", "testpass")
+	if err != nil {
+		t.Fatalf("Failed to create test user: %v", err)
+	}
+
+	// Создаем тестовое выражение
+	expr, err := db.CreateExpression(user.ID, "(2+3)*(4+5)")
+	if err != nil {
+		t.Fatalf("Failed to create test expression: %v", err)
+	}
+
+	// Создаем AST узел для сложного выражения со скобками
+	node := prepareASTNode(t, "(2+3)*(4+5)")
+
+	// Парсим AST и создаем операции в базе данных
+	err = orchestrator.ParseAST(expr.ID, node)
+	if err != nil {
+		t.Errorf("ParseAST() error = %v", err)
+		return
+	}
+
+	// Получаем выражение из базы данных
+	updatedExpr, err := db.GetExpressionByID(expr.ID)
+	if err != nil {
+		t.Errorf("GetExpressionByID() error = %v", err)
+		return
+	}
+
+	// Проверяем, что статус задан как `pending` (т.к. выражение еще не вычислено)
+	if updatedExpr.Status != orchestrator.StatusPending {
+		t.Errorf("Expression status = %v, want %v", updatedExpr.Status, orchestrator.StatusPending)
+	}
+
+	// Получаем операции, связанные с этим выражением
+	ops, err := db.GetOperationsByExpressionID(expr.ID)
+	if err != nil {
+		t.Errorf("GetOperationsByExpressionID() error = %v", err)
+		return
+	}
+
+	// Проверяем, что создано как минимум 3 операции (1 корневая и 2 дочерних)
+	if len(ops) < 3 {
+		t.Errorf("Expected at least 3 operations, got %d", len(ops))
+		return
+	}
+
+	// Проверяем, что есть ровно одна корневая операция
+	rootOps := 0
+	for _, op := range ops {
+		if op.IsRootExpression {
+			rootOps++
+		}
+	}
+
+	if rootOps != 1 {
+		t.Errorf("Expected exactly 1 root operation, got %d", rootOps)
+	}
+
+	// Проверяем, что корневая операция - это умножение
+	for _, op := range ops {
+		if op.IsRootExpression {
+			if op.Operator != "*" {
+				t.Errorf("Root operation should be multiplication, got %s", op.Operator)
+			}
+		}
+	}
+}

@@ -32,7 +32,6 @@ func GenerateToken(user *db.User) (string, error) {
 	// Время истечения токена из конфигурации
 	expirationTime := time.Now().Add(time.Duration(config.AppConfig.JWTExpirationMinutes) * time.Minute)
 
-	// Создаем утверждения с ID пользователя и временем истечения
 	claims := &Claims{
 		UserID: user.ID,
 		Login:  user.Login,
@@ -42,10 +41,8 @@ func GenerateToken(user *db.User) (string, error) {
 		},
 	}
 
-	// Создаем токен с указанными утверждениями и подписываем его с помощью метода HS256
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 
-	// Создаем строковое представление токена
 	tokenString, err := token.SignedString([]byte(config.AppConfig.JWTSecret))
 	if err != nil {
 		return "", err
@@ -56,9 +53,7 @@ func GenerateToken(user *db.User) (string, error) {
 
 // ValidateToken проверяет токен и возвращает утверждения, если токен действителен
 func ValidateToken(tokenString string) (*Claims, error) {
-	// Парсим токен и проверяем его действительность
 	token, err := jwt.ParseWithClaims(tokenString, &Claims{}, func(token *jwt.Token) (interface{}, error) {
-		// Проверяем, что используется правильный алгоритм подписи
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("неожиданный метод подписи: %v", token.Header["alg"])
 		}
@@ -88,7 +83,6 @@ func ExtractTokenFromHeader(r *http.Request) (string, error) {
 		return "", ErrMissingAuthHeader
 	}
 
-	// Проверяем, начинается ли заголовок с "Bearer "
 	parts := strings.Split(authHeader, " ")
 	if len(parts) != 2 || parts[0] != "Bearer" {
 		return "", ErrInvalidAuthHeader

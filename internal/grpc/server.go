@@ -3,6 +3,7 @@ package grpc
 import (
 	"context"
 	"net"
+	"parallel-calculator/internal/config"
 	"parallel-calculator/internal/db"
 	"parallel-calculator/internal/logger"
 	"parallel-calculator/internal/orchestrator"
@@ -45,8 +46,6 @@ func (s *OrchestratorService) GetTask(ctx context.Context, req *proto.GetTaskReq
 		}, nil
 	}
 
-	// Создаем ответ с задачей
-	// Проверяем значения LeftValue и RightValue на nil
 	var leftVal, rightVal float64
 	if readyOp.LeftValue != nil {
 		leftVal = *readyOp.LeftValue
@@ -55,17 +54,18 @@ func (s *OrchestratorService) GetTask(ctx context.Context, req *proto.GetTaskReq
 		rightVal = *readyOp.RightValue
 	}
 
-	// Определяем время операции на основе сложности оператора
 	var opTime time.Duration
 	switch readyOp.Operator {
-	case "+", "-":
-		opTime = 1 * time.Second
+	case "+":
+		opTime = config.AppConfig.TimeAddition
+	case "-":
+		opTime = config.AppConfig.TimeSubtraction
 	case "*":
-		opTime = 2 * time.Second
+		opTime = config.AppConfig.TimeMultiplication
 	case "/":
-		opTime = 3 * time.Second
+		opTime = config.AppConfig.TimeDivision
 	default:
-		opTime = 1 * time.Second
+		opTime = config.AppConfig.TimeAddition
 	}
 
 	return &proto.GetTaskResponse{
@@ -112,16 +112,13 @@ func StartGRPCServer(address string) (*grpc.Server, error) {
 		return nil, err
 	}
 
-	// Создаем новый gRPC сервер
 	s := grpc.NewServer()
 
-	// Регистрируем наш сервис на сервере
 	proto.RegisterTaskServiceServer(s, &OrchestratorService{})
 
 	// Запускаем сервер
 	logger.INFO.Printf("gRPC оркестратор запущен на %s", address)
 
-	// Запуск в горутине с возможностью graceful shutdown
 	go func() {
 		if err := s.Serve(lis); err != nil && err != grpc.ErrServerStopped {
 			logger.ERROR.Fatalf("Ошибка запуска gRPC оркестратора: %v", err)

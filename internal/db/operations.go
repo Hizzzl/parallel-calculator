@@ -32,7 +32,6 @@ func CreateOperation(expressionID int64, parentOpID *int64, operator string,
 		return nil, err
 	}
 
-	// Возвращаем созданную операцию
 	id, err := res.LastInsertId()
 	if err != nil {
 		return nil, err
@@ -62,16 +61,17 @@ func GetOperationByID(id int64) (*Operation, error) {
 	var parentOpID sql.NullInt64
 	var leftValue, rightValue, result sql.NullFloat64
 	var childPosition sql.NullString
-	var isRoot bool // Изменили тип на bool, так как SQLite хранит это поле как boolean
+	var errorMessage sql.NullString
+	var isRoot bool
 
 	err := DB.QueryRow(
 		`SELECT id, expression_id, parent_operation_id, child_position, left_value, right_value,
-		operator, status, result, is_root_expression, created_at, updated_at
+		operator, status, result, error_message, is_root_expression, created_at, updated_at
 		FROM operations WHERE id = ?`,
 		id,
 	).Scan(
 		&op.ID, &op.ExpressionID, &parentOpID, &childPosition, &leftValue, &rightValue,
-		&op.Operator, &op.Status, &result, &isRoot, &createdAtStr, &updatedAtStr,
+		&op.Operator, &op.Status, &result, &errorMessage, &isRoot, &createdAtStr, &updatedAtStr,
 	)
 
 	if err != nil {
@@ -81,7 +81,6 @@ func GetOperationByID(id int64) (*Operation, error) {
 		return nil, err
 	}
 
-	// Обрабатываем нулевые поля
 	if parentOpID.Valid {
 		val := parentOpID.Int64
 		op.ParentOpID = &val
@@ -97,7 +96,6 @@ func GetOperationByID(id int64) (*Operation, error) {
 		op.RightValue = &val
 	}
 
-	// Обрабатываем позицию относительно родителя
 	if childPosition.Valid {
 		val := childPosition.String
 		op.ChildPosition = &val
@@ -108,9 +106,13 @@ func GetOperationByID(id int64) (*Operation, error) {
 		op.Result = &val
 	}
 
+	if errorMessage.Valid {
+		val := errorMessage.String
+		op.ErrorMessage = &val
+	}
+
 	op.IsRootExpression = isRoot
 
-	// Парсим временные метки в формате RFC3339
 	op.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 	if err != nil {
 		return nil, err
@@ -130,7 +132,7 @@ func GetOperationsByExpressionID(expressionID int64) ([]*Operation, error) {
 	defer DbMutex.Unlock()
 	rows, err := DB.Query(
 		`SELECT id, expression_id, parent_operation_id, child_position, left_value, right_value,
-		operator, status, result, is_root_expression, created_at, updated_at
+		operator, status, result, error_message, is_root_expression, created_at, updated_at
 		FROM operations WHERE expression_id = ?`,
 		expressionID,
 	)
@@ -147,17 +149,17 @@ func GetOperationsByExpressionID(expressionID int64) ([]*Operation, error) {
 		var parentOpID sql.NullInt64
 		var childPosition sql.NullString
 		var leftValue, rightValue, result sql.NullFloat64
+		var errorMessage sql.NullString
 		var isRoot bool
 
 		err := rows.Scan(
 			&op.ID, &op.ExpressionID, &parentOpID, &childPosition, &leftValue, &rightValue,
-			&op.Operator, &op.Status, &result, &isRoot, &createdAtStr, &updatedAtStr,
+			&op.Operator, &op.Status, &result, &errorMessage, &isRoot, &createdAtStr, &updatedAtStr,
 		)
 		if err != nil {
 			return nil, err
 		}
 
-		// Handle nullable fields
 		if parentOpID.Valid {
 			val := parentOpID.Int64
 			op.ParentOpID = &val
@@ -183,10 +185,13 @@ func GetOperationsByExpressionID(expressionID int64) ([]*Operation, error) {
 			op.Result = &val
 		}
 
-		// Значение уже имеет тип bool, просто присваиваем
+		if errorMessage.Valid {
+			val := errorMessage.String
+			op.ErrorMessage = &val
+		}
+
 		op.IsRootExpression = isRoot
 
-		// Парсим временные метки в формате RFC3339
 		op.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 		if err != nil {
 			return nil, err
@@ -223,7 +228,6 @@ func SetOperationResult(id int64, result float64) error {
 	DbMutex.Lock()
 	defer DbMutex.Unlock()
 
-	// Обновляем только значение результата
 	_, err := DB.Exec(
 		"UPDATE operations SET result = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?",
 		result, id,
@@ -292,27 +296,27 @@ func GetReadyOperation() (*Operation, error) {
 	var parentOpID sql.NullInt64
 	var childPosition sql.NullString
 	var leftValue, rightValue, result sql.NullFloat64
+	var errorMessage sql.NullString
 	var isRoot bool
 
 	err := DB.QueryRow(
 		`SELECT id, expression_id, parent_operation_id, child_position, left_value, right_value,
-		operator, status, result, is_root_expression, created_at, updated_at
+		operator, status, result, error_message, is_root_expression, created_at, updated_at
 		FROM operations 
 		WHERE status = ? LIMIT 1`,
 		StatusReady,
 	).Scan(
 		&op.ID, &op.ExpressionID, &parentOpID, &childPosition, &leftValue, &rightValue,
-		&op.Operator, &op.Status, &result, &isRoot, &createdAtStr, &updatedAtStr,
+		&op.Operator, &op.Status, &result, &errorMessage, &isRoot, &createdAtStr, &updatedAtStr,
 	)
 
 	if err != nil {
 		if err == sql.ErrNoRows {
-			return nil, nil // Нет готовых операций
+			return nil, nil
 		}
 		return nil, err
 	}
 
-	// Handle nullable fields
 	if parentOpID.Valid {
 		val := parentOpID.Int64
 		op.ParentOpID = &val
@@ -338,15 +342,18 @@ func GetReadyOperation() (*Operation, error) {
 		op.Result = &val
 	}
 
+	if errorMessage.Valid {
+		val := errorMessage.String
+		op.ErrorMessage = &val
+	}
+
 	op.IsRootExpression = isRoot
 
-	// Parse timestamps
 	op.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 	if err != nil {
 		return nil, err
 	}
 
-	// Аналогично для UpdatedAt
 	op.UpdatedAt, err = time.Parse(time.RFC3339, updatedAtStr)
 	if err != nil {
 		return nil, err

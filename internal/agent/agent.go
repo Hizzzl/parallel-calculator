@@ -47,18 +47,18 @@ func (g *grpcClientAdapter) GetTask() (*Task, error) {
 	if err := g.ensureClient(); err != nil {
 		return nil, err
 	}
-	
+
 	// Получаем задачу из gRPC
 	grpcTask, err := g.client.GetTask()
 	if err != nil {
 		return nil, err
 	}
-	
+
 	// Если нет задачи, возвращаем nil
 	if grpcTask == nil {
 		return nil, nil
 	}
-	
+
 	// Преобразуем в локальный тип Task
 	return &Task{
 		ID:            grpcTask.ID,
@@ -74,14 +74,14 @@ func (g *grpcClientAdapter) SendTaskResult(result TaskResult) error {
 	if err := g.ensureClient(); err != nil {
 		return err
 	}
-	
+
 	// Преобразуем в тип для gRPC
 	grpcResult := grpc.TaskResult{
 		ID:     result.ID,
 		Result: result.Result,
 		Error:  result.Error,
 	}
-	
+
 	return g.client.SendTaskResult(grpcResult)
 }
 
@@ -113,10 +113,8 @@ func StartAgent() {
 		go Worker(tasks_chan, i+1)
 	}
 
-	// Всегда используем gRPC
 	logger.INFO.Println("Starting Agent with gRPC communication")
 
-	// Создаем клиента gRPC
 	var client TaskClient
 	var err error
 
@@ -130,21 +128,17 @@ func StartAgent() {
 	if err != nil {
 		logger.ERROR.Fatalf("Failed to create gRPC client: %v - terminating agent", err)
 	}
-	// Закрываем клиент при завершении
 	defer client.Close()
 
-	// Устанавливаем глобального клиента для использования рабочими потоками
 	SetGlobalClient(client)
 
 	for {
 		time.Sleep(config.AppConfig.AgentRequestTimeout)
-		
-		// Получаем задачу через выбранный клиент
+
 		task, err := client.GetTask()
 
 		if err != nil {
 			logger.ERROR.Println(err)
-			// Не завершаем агента, просто продолжаем работу
 			continue
 		}
 		if task == nil {

@@ -53,7 +53,6 @@ func HandleCalculate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Возвращаем ID выражения как он в БД
 	response := CalculateResponse{
 		ID: *id,
 	}
@@ -104,7 +103,6 @@ func HandleGetExpressions(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Получаем выражения пользователя из базы данных
-	// Используем функцию-прокси вместо прямого доступа к БД
 	expressions, err := GetExpressionsByUserID(userID)
 	if err != nil {
 		logger.LogERROR(fmt.Sprintf("Failed to get expressions: %v", err))
@@ -182,7 +180,6 @@ func HandleGetExpressionByID(w http.ResponseWriter, r *http.Request) {
 		Status: expression.Status,
 	}
 
-	// Добавляем результат только если он существует
 	if expression.Result != nil {
 		expressionResponse.Result = *expression.Result
 	}

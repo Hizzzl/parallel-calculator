@@ -19,8 +19,6 @@ type GRPCTaskClient struct {
 
 // NewGRPCTaskClient создает новый gRPC клиент для взаимодействия с оркестратором
 func NewGRPCTaskClient(address string) (*GRPCTaskClient, error) {
-	// Устанавливаем соединение с сервером, используя незащищенный канал (для простоты)
-	// В продакшене рекомендуется использовать TLS
 	conn, err := grpc.Dial(address, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		return nil, err
@@ -59,13 +57,11 @@ func (c *GRPCTaskClient) GetTask() (*Task, error) {
 		return nil, err
 	}
 
-	// Если задач нет, возвращаем nil
 	if !resp.HasTask {
 		logger.INFO.Println("Нет доступных задач")
 		return nil, nil
 	}
 
-	// Преобразуем ответ в структуру Task
 	task := &Task{
 		ID:            resp.Id,
 		LeftValue:     resp.LeftValue,
@@ -86,7 +82,6 @@ func (c *GRPCTaskClient) SendTaskResult(taskResult TaskResult) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
-	// Отправляем запрос
 	resp, err := c.client.SendTaskResult(ctx, &proto.TaskResultRequest{
 		Id:     taskResult.ID,
 		Result: taskResult.Result,
@@ -97,7 +92,6 @@ func (c *GRPCTaskClient) SendTaskResult(taskResult TaskResult) error {
 		return err
 	}
 
-	// Проверяем успешность операции
 	if !resp.Success {
 		logger.ERROR.Println("Сервер сообщил об ошибке: ", resp.Error)
 		return errors.New(resp.Error)

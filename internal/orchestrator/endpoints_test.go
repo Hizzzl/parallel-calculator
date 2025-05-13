@@ -43,14 +43,7 @@ func createTestUser(t *testing.T) (int64, string) {
 // TestHandleCalculate проверяет корректную обработку запроса на вычисление
 func TestHandleCalculate(t *testing.T) {
 	// Инициализируем конфигурацию
-	config.InitConfig("../../.env")
-	// Устанавливаем базу данных в памяти для тестов
-
-	// Инициализируем базу данных, передаем путь к директории с schema.sql
-	err := db.InitDB("../../internal/db")
-	if err != nil {
-		t.Fatalf("Failed to initialize database: %v", err)
-	}
+	initTestDB(t)
 
 	// Настраиваем тестовое окружение
 	defer db.CleanupDB()
@@ -153,14 +146,7 @@ func TestHandleCalculate(t *testing.T) {
 // TestHandleGetExpressions проверяет получение списка выражений пользователя
 func TestHandleGetExpressions(t *testing.T) {
 	// Инициализируем конфигурацию
-	config.InitConfig("../../.env")
-	// Устанавливаем базу данных в памяти для тестов
-
-	// Инициализируем базу данных, передаем путь к директории с schema.sql
-	err := db.InitDB("../../internal/db")
-	if err != nil {
-		t.Fatalf("Failed to initialize database: %v", err)
-	}
+	initTestDB(t)
 
 	defer db.CleanupDB()
 
@@ -246,14 +232,7 @@ func TestHandleGetExpressions(t *testing.T) {
 // TestHandleGetExpressionByID проверяет получение выражения по ID
 func TestHandleGetExpressionByID(t *testing.T) {
 	// Инициализируем конфигурацию
-	config.InitConfig("../../.env")
-	// Устанавливаем базу данных в памяти для тестов
-
-	// Инициализируем базу данных, передаем путь к директории с schema.sql
-	err := db.InitDB("../../internal/db")
-	if err != nil {
-		t.Fatalf("Failed to initialize database: %v", err)
-	}
+	initTestDB(t)
 
 	defer db.CleanupDB()
 
@@ -364,14 +343,7 @@ func TestHandleGetExpressionByID(t *testing.T) {
 // TestGetUserIDFromToken проверяет извлечение ID пользователя из JWT-токена
 func TestGetUserIDFromToken(t *testing.T) {
 	// Инициализируем конфигурацию
-	config.InitConfig("../../.env")
-	// Устанавливаем базу данных в памяти для тестов
-
-	// Инициализируем базу данных, передаем путь к директории с schema.sql
-	err := db.InitDB("../../internal/db")
-	if err != nil {
-		t.Fatalf("Failed to initialize database: %v", err)
-	}
+	initTestDB(t)
 
 	defer db.CleanupDB()
 

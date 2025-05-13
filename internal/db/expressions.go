@@ -71,7 +71,6 @@ func GetExpressionByID(id int64) (*Expression, error) {
 		expr.ErrorMessage = &val
 	}
 
-	// Сначала пробуем парсить время в формате RFC3339
 	expr.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 	if err != nil {
 		return nil, err
@@ -165,13 +164,11 @@ func GetUserExpressions(userID int64) ([]*Expression, error) {
 			expr.ErrorMessage = &val
 		}
 
-		// Сначала пробуем парсить время в формате RFC3339
 		expr.CreatedAt, err = time.Parse(time.RFC3339, createdAtStr)
 		if err != nil {
 			return nil, err
 		}
 
-		// Аналогично для UpdatedAt
 		expr.UpdatedAt, err = time.Parse(time.RFC3339, updatedAtStr)
 		if err != nil {
 			return nil, err
